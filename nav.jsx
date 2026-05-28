@@ -25,6 +25,7 @@ function Nav() {
           <a href={home("#why")}>Why Real Estate</a>
           <a href={home("#how")}>How It Works</a>
           <a href={home("#states")}>Classes</a>
+          <a href="Property Management.html">Property Management</a>
         </div>
         <a href={home("#states")} className="btn btn-gold" style={{padding:'12px 20px'}}>
           <Icon.Rocket size={15}/> Get Licensed
