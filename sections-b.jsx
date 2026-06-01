@@ -20,7 +20,7 @@ function CoachingSection() {
             <div className="coach-badge">EP. 008 · NEW</div>
             <div className="coach-play">
               <div className="pl"><Icon.PlaySm size={12}/></div>
-              Now Playing — Coaching Series
+              Now Playing: Coaching Series
             </div>
           </div>
 
@@ -28,7 +28,7 @@ function CoachingSection() {
             <div className="eyebrow">Featured Coaching</div>
             <h2 style={{marginTop: 18}}>Learn From Real<br/><span className="gold">Industry Professionals.</span></h2>
             <p style={{color:'var(--text-dim)', fontSize:17, lineHeight:1.55, margin:'22px 0 0', maxWidth:520}}>
-              The <strong style={{color:'var(--warm-white)'}}>Rick Berube Coaching Series</strong> — short-form coaching clips, exam prep strategies, mindset training, and real-world advice from active industry professionals.
+              The <strong style={{color:'var(--warm-white)'}}>Rick Berube Coaching Series</strong>: short-form coaching clips, exam prep strategies, mindset training, and real-world advice from active industry professionals.
             </p>
 
             <div className="coach-clips">
@@ -61,16 +61,16 @@ function LearningSection() {
         <div className="section-head reveal">
           <div className="eyebrow">Flexible Learning Options</div>
           <h2>Learn Your Way.</h2>
-          <p>Three modern learning tracks. Same curriculum, same state exam, same career outcome — built around the way you actually live.</p>
+          <p>Three modern learning tracks. Same curriculum, same state exam, same career outcome, built around the way you actually live.</p>
         </div>
 
         <div className="glass-grid reveal">
           <div className="glass">
             <div className="ic"><Icon.Online size={22}/></div>
             <h3>Online Classes</h3>
-            <p>Self-paced flexibility from anywhere. Mobile-first lessons, mock exams, and progress tracking — finish in as little as 4 weeks.</p>
+            <p>Self-paced flexibility from anywhere. Mobile-first lessons, mock exams, and progress tracking. Finish in as little as 4 weeks.</p>
             <div className="meta">
-              <span>4 — 12 WEEKS</span>
+              <span>4 TO 12 WEEKS</span>
               <span className="badge">Most Popular</span>
             </div>
           </div>
@@ -197,7 +197,7 @@ function FinalCTA() {
           Start Your <span className="gold">New Career.</span>
         </h2>
         <p>
-          Flexible classes, modern coaching, and real support — designed to help you succeed in real estate. The next class starts soon.
+          Flexible classes, modern coaching, and real support, designed to help you succeed in real estate. The next class starts soon.
         </p>
         <div className="final-ctas">
           <a className="btn btn-gold" href="#states"><Icon.Rocket size={15}/> Enroll Now</a>
@@ -220,15 +220,15 @@ function Footer() {
               <img src="assets/logo.png" alt="Real Estate Academy" className="logo-img"/>
             </div>
             <p style={{color:'var(--text-dim)', fontSize:14, lineHeight:1.55, maxWidth:340, margin:0}}>
-              The modern real estate academy. Get licensed, get coached, get launched — built for the next generation of agents across Arizona, California, and Nevada.
+              The modern real estate academy. Get licensed, get coached, get launched, built for the next generation of agents across Arizona, California, and Nevada.
             </p>
           </div>
           <div>
             <h4>Programs</h4>
             <ul>
-              <li><a href="Get Licensed Arizona.html">Get Licensed — Arizona</a></li>
-              <li><a href="Get Licensed California.html">Get Licensed — California</a></li>
-              <li><a href="Get Licensed Nevada.html">Get Licensed — Nevada</a></li>
+              <li><a href="Get Licensed Arizona.html">Get Licensed: Arizona</a></li>
+              <li><a href="Get Licensed California.html">Get Licensed: California</a></li>
+              <li><a href="Get Licensed Nevada.html">Get Licensed: Nevada</a></li>
               <li><a href="#">Online Classes</a></li>
               <li><a href="#">Continuing Education</a></li>
             </ul>

@@ -1,7 +1,7 @@
 // app.jsx — Main App entry
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "#CBB77C",
+  "accent": "#C7CBD1",
   "heroTone": "warm",
   "headlineFont": "Montserrat",
   "showStickyCTA": true,
@@ -10,7 +10,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "density": "regular"
 }/*EDITMODE-END*/;
 
-const ACCENT_OPTIONS = ['#CBB77C', '#D9C99A', '#E26A2C', '#8FB8A5', '#9DB2D9'];
+const ACCENT_OPTIONS = ['#C7CBD1', '#DEE2E7', '#E26A2C', '#8FB8A5', '#9DB2D9'];
 const HERO_TONES = ['warm', 'cool', 'noir'];
 const FONT_OPTIONS = ['Montserrat', 'Playfair Display', 'Space Grotesk', 'DM Serif Display'];
 

@@ -31,7 +31,7 @@
 }
 .other-state-link:hover {
   border-color: var(--gold);
-  background: rgba(203,183,124,0.06);
+  background: rgba(199,203,209,0.06);
   transform: translateY(-2px);
 }
 .other-state-code {
@@ -106,7 +106,7 @@
   font-style: italic;
   font-weight: 500;
   font-family: 'Playfair Display', 'Montserrat', serif;
-  text-shadow: 0 0 40px rgba(203,183,124,0.35);
+  text-shadow: 0 0 40px rgba(199,203,209,0.35);
 }
 .gl-hero-sub {
   color: rgba(248,248,245,0.82);
@@ -165,8 +165,8 @@
   overflow: hidden;
 }
 .center-card:hover {
-  background: rgba(203,183,124,0.04);
-  border-color: rgba(203,183,124,0.4);
+  background: rgba(199,203,209,0.04);
+  border-color: rgba(199,203,209,0.4);
   transform: translateY(-2px);
 }
 .center-num {
@@ -184,9 +184,9 @@
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 999px;
-  background: rgba(203,183,124,0.12);
+  background: rgba(199,203,209,0.12);
   color: var(--gold);
-  border: 1px solid rgba(203,183,124,0.25);
+  border: 1px solid rgba(199,203,209,0.25);
 }
 .center-card h3 {
   font-size: 26px;
@@ -245,9 +245,9 @@
   transition: all .2s;
   font-family: inherit;
 }
-.course-tab:hover { border-color: rgba(203,183,124,0.4); }
+.course-tab:hover { border-color: rgba(199,203,209,0.4); }
 .course-tab.active {
-  background: rgba(203,183,124,0.08);
+  background: rgba(199,203,209,0.08);
   border-color: var(--gold);
 }
 .course-tab-code {
@@ -288,7 +288,7 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
-  background: rgba(203,183,124,0.1);
+  background: rgba(199,203,209,0.1);
   padding: 5px 12px;
   border-radius: 999px;
   margin-bottom: 14px;
@@ -311,7 +311,7 @@
   font-size: 90px;
   font-weight: 700;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(203,183,124,0.4);
+  -webkit-text-stroke: 1px rgba(199,203,209,0.4);
   line-height: 0.9;
   letter-spacing: -0.04em;
 }
@@ -384,7 +384,7 @@
   transition: all .2s;
 }
 .course-doc:hover {
-  background: rgba(203,183,124,0.08);
+  background: rgba(199,203,209,0.08);
   border-color: var(--gold);
   color: var(--gold);
 }
@@ -392,7 +392,7 @@
   width: 24px; height: 24px;
   display: grid; place-items: center;
   border-radius: 6px;
-  background: rgba(203,183,124,0.15);
+  background: rgba(199,203,209,0.15);
   color: var(--gold);
 }
 
@@ -424,11 +424,11 @@
   gap: 18px;
   transition: all .3s;
 }
-.tuition-card:hover { border-color: rgba(203,183,124,0.3); }
+.tuition-card:hover { border-color: rgba(199,203,209,0.3); }
 .tuition-card.popular {
-  background: linear-gradient(180deg, rgba(203,183,124,0.08) 0%, rgba(203,183,124,0.02) 100%);
+  background: linear-gradient(180deg, rgba(199,203,209,0.08) 0%, rgba(199,203,209,0.02) 100%);
   border-color: var(--gold);
-  box-shadow: 0 20px 40px -20px rgba(203,183,124,0.25);
+  box-shadow: 0 20px 40px -20px rgba(199,203,209,0.25);
 }
 .tuition-flag {
   position: absolute;
@@ -527,8 +527,8 @@
 .reimburse-card {
   position: relative;
   padding: 40px;
-  background: linear-gradient(180deg, rgba(203,183,124,0.06) 0%, rgba(255,255,255,0.02) 100%);
-  border: 1px solid rgba(203,183,124,0.22);
+  background: linear-gradient(180deg, rgba(199,203,209,0.06) 0%, rgba(255,255,255,0.02) 100%);
+  border: 1px solid rgba(199,203,209,0.22);
   border-radius: 22px;
   overflow: hidden;
 }
@@ -538,7 +538,7 @@
   top: -50px; right: -50px;
   width: 250px; height: 250px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(203,183,124,0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(199,203,209,0.18), transparent 70%);
   filter: blur(20px);
 }
 .reimburse-card-label {
@@ -601,7 +601,7 @@
   right: -100px; top: -50px;
   width: 300px; height: 300px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(203,183,124,0.14), transparent 70%);
+  background: radial-gradient(circle, rgba(199,203,209,0.14), transparent 70%);
   filter: blur(20px);
 }
 @media (max-width: 880px) {
@@ -646,7 +646,7 @@
   box-shadow: 0 20px 40px -20px rgba(0,0,0,0.5);
 }
 .selfpaced-deco-card.c1 { top: 0; left: 20px; transform: rotate(-3deg); }
-.selfpaced-deco-card.c2 { top: 110px; right: 0; transform: rotate(2deg); border-color: rgba(203,183,124,0.3); }
+.selfpaced-deco-card.c2 { top: 110px; right: 0; transform: rotate(2deg); border-color: rgba(199,203,209,0.3); }
 .selfpaced-deco-card.c3 { bottom: 0; left: 60px; transform: rotate(-1deg); }
 .selfpaced-deco-card .d-row {
   display: flex; align-items: center; gap: 10px;
@@ -700,8 +700,8 @@
 .pm-accred-tick {
   width: 22px; height: 22px;
   border-radius: 50%;
-  background: rgba(203,183,124,0.14);
-  border: 1px solid rgba(203,183,124,0.4);
+  background: rgba(199,203,209,0.14);
+  border: 1px solid rgba(199,203,209,0.4);
   display: grid; place-items: center;
   color: var(--gold);
   flex-shrink: 0;
