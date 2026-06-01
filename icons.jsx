@@ -30,6 +30,7 @@ const Icon = {
   Users:     (p) => <Ico {...p} d={["M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2", "M23 21v-2a4 4 0 00-3-3.87", "M16 3.13a4 4 0 010 7.75"]}><circle cx="9" cy="7" r="4" stroke="currentColor" fill="none" strokeWidth="1.8"/></Ico>,
   Menu:      (p) => <Ico {...p} d={["M3 12h18", "M3 6h18", "M3 18h18"]} />,
   Close:     (p) => <Ico {...p} d={["M18 6L6 18", "M6 6l12 12"]} />,
+  Mail:      (p) => <Ico {...p} d={["M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2z", "M3 7l9 6 9-6"]} />,
   Plus:      (p) => <Ico {...p} d={["M12 5v14", "M5 12h14"]} />,
 };
 

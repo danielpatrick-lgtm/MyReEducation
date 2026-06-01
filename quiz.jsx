@@ -1,4 +1,4 @@
-// quiz.jsx — Career Match Quiz modal
+// quiz.jsx - Career Match Quiz modal
 // 5 questions, 4 career archetypes, lightweight scoring.
 
 const QUIZ_QUESTIONS = [
@@ -21,7 +21,7 @@ const QUIZ_QUESTIONS = [
     ],
   },
   {
-    q: "Your ideal client looks like",
+    q: "Your ideal client looks like…",
     a: [
       { label: "First-time buyers, lots of them",                   type: 'closer' },
       { label: "A returning client buying their third home",         type: 'luxury' },
@@ -30,7 +30,7 @@ const QUIZ_QUESTIONS = [
     ],
   },
   {
-    q: "Your biggest strength",
+    q: "Your biggest strength is…",
     a: [
       { label: "Hustle and follow-through",                          type: 'closer' },
       { label: "Taste, presentation, and presence",                  type: 'luxury' },
@@ -39,7 +39,7 @@ const QUIZ_QUESTIONS = [
     ],
   },
   {
-    q: "Five years from now, you want to be",
+    q: "Five years from now, you want to be…",
     a: [
       { label: "The top producer at your brokerage",                 type: 'closer' },
       { label: "The agent celebrities and execs call first",         type: 'luxury' },
@@ -80,17 +80,34 @@ const ARCHETYPES = {
   },
 };
 
+// Leads are delivered here. FormSubmit requires a ONE-TIME activation:
+// the first submission triggers a confirmation email to this address —
+// click the link in it once and every future lead lands in the inbox.
+const LEAD_EMAIL = 'education@bhhsv2.com';
+const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/' + LEAD_EMAIL;
+
 function CareerQuiz() {
   const [open, setOpen] = React.useState(false);
   const [step, setStep]       = React.useState(0);   // 0..QUIZ_QUESTIONS.length (last = result)
   const [answers, setAnswers] = React.useState([]);  // array of types
   const isResult = step >= QUIZ_QUESTIONS.length;
 
+  // Lead-capture form state
+  const [lead, setLead]     = React.useState({ name: '', email: '', phone: '' });
+  const [sending, setSending] = React.useState(false);
+  const [sent, setSent]       = React.useState(false);
+  const [sendError, setSendError] = React.useState('');
+
+  const resetLead = () => {
+    setLead({ name: '', email: '', phone: '' });
+    setSending(false); setSent(false); setSendError('');
+  };
+
   const onClose = React.useCallback(() => setOpen(false), []);
 
   // Open via global event dispatched from any "Take the Quiz" button
   React.useEffect(() => {
-    const onOpen = () => { setStep(0); setAnswers([]); setOpen(true); };
+    const onOpen = () => { setStep(0); setAnswers([]); resetLead(); setOpen(true); };
     window.addEventListener('open-career-quiz', onOpen);
     return () => window.removeEventListener('open-career-quiz', onOpen);
   }, []);
@@ -128,6 +145,37 @@ function CareerQuiz() {
       if (counts[t] > max) { max = counts[t]; winner = t; }
     });
     return ARCHETYPES[winner];
+  };
+
+  const submitLead = async (archetype) => {
+    if (sending) return;
+    const email = lead.email.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setSendError('Please enter a valid email address.');
+      return;
+    }
+    setSending(true); setSendError('');
+    try {
+      const res = await fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          _subject: `New Career Quiz lead — ${archetype.name}`,
+          name: lead.name.trim() || '(not provided)',
+          email,
+          phone: lead.phone.trim() || '(not provided)',
+          quiz_result: archetype.name,
+          recommended_track: archetype.track,
+          source: 'Career Match Quiz',
+        }),
+      });
+      if (!res.ok) throw new Error('Bad response');
+      setSent(true);
+    } catch (err) {
+      setSendError('Something went wrong — please try again, or email us directly.');
+    } finally {
+      setSending(false);
+    }
   };
 
   const progress = isResult ? 1 : (step / QUIZ_QUESTIONS.length);
@@ -192,6 +240,47 @@ function CareerQuiz() {
                 <div className="quiz-result-track-name">{r.track}</div>
                 <div className="quiz-result-track-why">{r.why}</div>
               </div>
+
+              {!sent ? (
+                <form className="quiz-lead" onSubmit={(e) => { e.preventDefault(); submitLead(r); }}>
+                  <div className="quiz-lead-head">
+                    <Icon.Mail size={15}/>
+                    <span>Get your full match report + next steps emailed to you</span>
+                  </div>
+                  <div className="quiz-lead-fields">
+                    <input
+                      className="quiz-input" type="text" placeholder="Full name"
+                      value={lead.name} autoComplete="name"
+                      onChange={e => setLead(l => ({ ...l, name: e.target.value }))}
+                    />
+                    <input
+                      className="quiz-input" type="email" placeholder="Email address" required
+                      value={lead.email} autoComplete="email"
+                      onChange={e => { setLead(l => ({ ...l, email: e.target.value })); setSendError(''); }}
+                    />
+                    <input
+                      className="quiz-input" type="tel" placeholder="Phone (optional)"
+                      value={lead.phone} autoComplete="tel"
+                      onChange={e => setLead(l => ({ ...l, phone: e.target.value }))}
+                    />
+                  </div>
+                  {sendError && <div className="quiz-lead-error">{sendError}</div>}
+                  <button type="submit" className="btn btn-gold quiz-lead-submit" disabled={sending}>
+                    {sending ? 'Sending…' : <><Icon.Mail size={14}/> Send Me My Results</>}
+                  </button>
+                  <div className="quiz-lead-fine">
+                    We'll send your match report and a few next steps. No spam — unsubscribe anytime.
+                  </div>
+                </form>
+              ) : (
+                <div className="quiz-lead-success">
+                  <div className="quiz-lead-success-check"><Icon.Check size={20}/></div>
+                  <div className="quiz-lead-success-title">You're all set, {lead.name.trim().split(' ')[0] || 'future agent'}!</div>
+                  <div className="quiz-lead-success-text">
+                    Your <strong>{r.name}</strong> match report is on its way. An advisor will reach out about your <strong>{r.track}</strong> track.
+                  </div>
+                </div>
+              )}
 
               <div className="quiz-result-ctas">
                 <a className="btn btn-gold" href="#states" onClick={onClose}>
