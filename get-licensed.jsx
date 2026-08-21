@@ -79,7 +79,7 @@ const STATE_DATA = {
     hours: "135",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Real Estate Academy does not conduct pre-licensing classes in California. We've partnered with The CE Shop, an approved California Department of Real Estate (DRE) provider, to deliver all 135 required hours online and entirely self-paced.",
+    intro: "In California, we've partnered with The CE Shop, an approved California Department of Real Estate (DRE) provider, to deliver all 135 required pre-licensing hours online and entirely self-paced.",
     phone: "877-373-4542",
     phoneHref: "tel:8773734542",
     email: "California@reschool.com",
