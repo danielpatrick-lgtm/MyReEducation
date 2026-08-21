@@ -7,14 +7,17 @@ function StickyCTA() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  const cfg = (typeof window !== 'undefined' && window.STICKY_CTA) || {};
+  const href = cfg.href || '#states';
+  const ext = /^https?:/.test(href);
   return (
     <div className={"sticky-cta" + (visible ? " visible" : "")}>
       <div className="label">
-        Start Your Career Today
-        <small>Next class · Jun 14</small>
+        {cfg.title || 'Start Your Career Today'}
+        <small>{cfg.note || 'Next class · Jun 14'}</small>
       </div>
-      <a className="btn btn-gold" href="#states" style={{padding:'10px 16px', fontSize:13}}>
-        <Icon.Rocket size={13}/> Enroll
+      <a className="btn btn-gold" href={href} {...(ext ? {target:'_blank', rel:'noopener noreferrer'} : {})} style={{padding:'10px 16px', fontSize:13}}>
+        <Icon.Rocket size={13}/> {cfg.label || 'Enroll'}
       </a>
     </div>
   );

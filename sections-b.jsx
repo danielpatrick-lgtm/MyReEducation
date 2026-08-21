@@ -210,7 +210,19 @@ function FinalCTA() {
 }
 
 // ─── FOOTER ─────────────────────────────────────────────────
+const FOOTER_CONTACT = {
+  arizona:    { phone: '602-555-0142', href: 'tel:6025550142', ce: 'Continuing Education Arizona.html' },
+  california: { phone: '877-373-4542', href: 'tel:8773734542', ce: 'Continuing Education California.html' },
+  nevada:     { phone: '702-796-7777', href: 'tel:7027967777', ce: 'Continuing Education Nevada.html' },
+};
+
 function Footer() {
+  const st = (typeof window !== 'undefined' && window.STATE) || 'nevada';
+  const contact = FOOTER_CONTACT[st] || FOOTER_CONTACT.nevada;
+  const onHomePage = typeof window !== 'undefined' &&
+    /(?:index|Real Estate Academy)\.html$|^\/?$/.test(window.location.pathname);
+  const homeLink = (hash) => onHomePage ? hash : 'index.html' + hash;
+  const openQuiz = (e) => { e.preventDefault(); window.dispatchEvent(new Event('open-career-quiz')); };
   return (
     <footer className="footer">
       <div className="container">
@@ -229,28 +241,24 @@ function Footer() {
               <li><a href="Get Licensed Arizona.html">Get Licensed: Arizona</a></li>
               <li><a href="Get Licensed California.html">Get Licensed: California</a></li>
               <li><a href="Get Licensed Nevada.html">Get Licensed: Nevada</a></li>
-              <li><a href="#">Online Classes</a></li>
-              <li><a href="#">Continuing Education</a></li>
+              <li><a href={contact.ce}>Continuing Education</a></li>
+              <li><a href="Property Management.html">Property Management</a></li>
             </ul>
           </div>
           <div>
             <h4>Learn</h4>
             <ul>
-              <li><a href="#">How It Works</a></li>
-              <li><a href="#">Success Stories</a></li>
-              <li><a href="#">Coaching Series</a></li>
-              <li><a href="#">Career Match Quiz</a></li>
-              <li><a href="#">Exam Prep</a></li>
+              <li><a href={homeLink('#how')}>How It Works</a></li>
+              <li><a href={homeLink('#why')}>Why Real Estate</a></li>
+              <li><a href={homeLink('#states')}>Classes</a></li>
+              <li><a href="#" onClick={openQuiz}>Career Match Quiz</a></li>
             </ul>
           </div>
           <div>
             <h4>Connect</h4>
             <ul>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">TikTok</a></li>
-              <li><a href="#">YouTube</a></li>
-              <li><a href="#">Talk to an Advisor</a></li>
-              <li><a href="#">(702) 555-0142</a></li>
+              <li><a href={contact.href}>Talk to an Advisor</a></li>
+              <li><a href={contact.href}>{contact.phone}</a></li>
             </ul>
           </div>
         </div>
@@ -290,11 +298,6 @@ function Footer() {
 
         <div className="footer-bottom">
           <div>© 2026 Real Estate Academy · Licensed in Arizona · California · Nevada</div>
-          <div style={{display:'flex', gap:18}}>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Accessibility</a>
-          </div>
         </div>
       </div>
     </footer>

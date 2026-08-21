@@ -79,26 +79,29 @@ const STATE_DATA = {
     hours: "135",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Real Estate Academy's California track is approved by the California Department of Real Estate (DRE). Self-paced online and live virtual classes available across the state.",
-    phone: "415-555-0142",
-    phoneHref: "tel:4155550142",
+    intro: "Real Estate Academy does not conduct pre-licensing classes in California. We've partnered with The CE Shop, an approved California Department of Real Estate (DRE) provider, to deliver all 135 required hours online and entirely self-paced.",
+    phone: "877-373-4542",
+    phoneHref: "tel:8773734542",
     email: "California@reschool.com",
-    examPass: "87",
-    totalFee: "$489",
+    partner: "The CE Shop",
+    selfPacedOnly: true,
+    hideReimbursement: true,
+    hideFaqs: true,
     registerUrl: "https://bhhsca.theceshop.com/california/pre-licensing/ca-salesperson-pre-licensing-cost/",
-    centers: [
-      { name: "Los Angeles Campus",  addr: "11500 W Olympic Blvd Ste 400", city: "Los Angeles, CA 90064", tag: "Flagship"  },
-      { name: "San Francisco Center", addr: "100 Pine St Ste 1250",         city: "San Francisco, CA 94111", tag: "Evenings"  },
-      { name: "San Diego Campus",     addr: "4747 Executive Dr Ste 200",    city: "San Diego, CA 92121",   tag: "Day + Night" },
+    centers: [],
+    quickfacts: [
+      { k: "135", suffix: "hr", v: "DRE-required instruction" },
+      { k: "100", suffix: "%", v: "Online and self-paced" },
+      { k: "CE Shop", v: "DRE-approved provider" },
     ],
     courses: [
       {
         id: 'principles',
-        badge: 'Most Popular · Full Course',
+        badge: 'Through The CE Shop · Self-Paced',
         code: '135 HR',
         title: 'California Salesperson Pre-Licensing',
         hours: '135 hours (3 × 45hr courses)',
-        desc: "Satisfies all three required DRE courses (Real Estate Principles, Real Estate Practice, and one approved Elective) for the California salesperson exam.",
+        desc: "Satisfies all three required DRE courses (Real Estate Principles, Real Estate Practice, and one approved Elective) for the California salesperson exam. Delivered online and self-paced through The CE Shop.",
         topics: [
           'Real Estate Principles (45hr)',
           'Real Estate Practice (45hr)',
@@ -107,44 +110,11 @@ const STATE_DATA = {
           'Fair Housing & Federal Compliance',
           'Trust Funds & Brokerage Accounting',
         ],
-        note: "Complete the Academy's enrollment agreement before class start. Email documents to California@reschool.com.",
-        docs: [{ label: 'CA Enrollment Agreement', href: '#' }, { label: 'Course Catalog', href: '#' }],
-      },
-      {
-        id: 'broker',
-        badge: 'Broker Track',
-        code: '8 × 45HR',
-        title: 'California Broker Pre-Licensing',
-        hours: '360 hours (8 courses)',
-        desc: "For licensed California salespersons with 2+ years' experience or qualifying degree, pursuing a broker license through DRE.",
-        topics: [
-          'Real Estate Practice',
-          'Legal Aspects of Real Estate',
-          'Real Estate Finance',
-          'Real Estate Appraisal',
-          'Real Estate Economics or Accounting',
-          'Three Approved Electives',
-        ],
-        note: "Requires proof of salesperson license and qualifying experience. Submit DRE qualification packet.",
-        docs: [{ label: 'Broker Application Packet', href: '#' }],
-      },
-      {
-        id: 'ce',
-        badge: 'Continuing Education',
-        code: '45 HR',
-        title: 'California 4-Year Renewal CE',
-        hours: '45 hours / 4-year renewal',
-        desc: "Required DRE renewal package: Ethics, Agency, Trust Fund, Fair Housing, Risk Management, Management & Supervision, plus electives.",
-        topics: ['Ethics (3hr)', 'Agency (3hr)', 'Trust Fund (3hr)', 'Fair Housing (3hr)', 'Risk Management (3hr)', 'Management & Supervision (3hr)', '18hr Consumer Protection', '12hr Consumer Service'],
-        note: "DRE-approved package. Certificate issued immediately on completion.",
-        docs: [{ label: 'CE Schedule', href: '#' }],
+        note: "Enrollment, course materials, and payment are handled directly by The CE Shop. There is no enrollment agreement or book pickup for California. Start any time and work at your own pace.",
+        docs: [],
       },
     ],
-    tuition: [
-      { code: '135 HR', title: 'Salesperson Package', sub: '3 required courses',  rows: [['Tuition','$299'],['Texts','$165'],['Admin Fee','$25']], total: '$489', popular: true },
-      { code: '360 HR', title: 'Broker Package',      sub: 'All 8 courses',       rows: [['Tuition','$849'],['Texts','$285'],['Admin Fee','$25']], total: '$1,159' },
-      { code: '45 HR',  title: '4-Year Renewal CE',   sub: 'Active license',      rows: [['Tuition','$129'],['Materials','$25'],['Admin Fee','$25']], total: '$179' },
-    ],
+    tuition: null,
   },
   nevada: {
     name: "Nevada",
@@ -228,6 +198,13 @@ const registerProps = REGISTER_EXT
   ? { href: REGISTER_URL, target: '_blank', rel: 'noopener noreferrer' }
   : { href: REGISTER_URL };
 
+// Sticky mobile CTA: point it at this page's real enrollment target.
+if (typeof window !== 'undefined') {
+  window.STICKY_CTA = S.selfPacedOnly
+    ? { title: 'Start Your Career Today', note: 'Self-paced · Enroll any time', href: REGISTER_URL, label: 'Enroll' }
+    : { title: 'Start Your Career Today', note: 'Open enrollment', href: '#register', label: 'Enroll' };
+}
+
 // ─── HERO ────────────────────────────────────────────────────
 function GLHero() {
   return (
@@ -247,16 +224,22 @@ function GLHero() {
         <h1>{S.tagline}<br/><span className="gold">{S.accent}</span></h1>
         <p className="gl-hero-sub">{S.intro}</p>
         <div className="hero-ctas">
-          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> Register for Class</a>
+          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
           <a className="btn btn-ghost" href="#courses"><Icon.Calendar size={15}/> View Courses</a>
           <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phone}</a>
         </div>
 
         <div className="gl-quickfacts">
-          <div><div className="k">{S.hours}<span style={{color:'var(--gold)'}}>hr</span></div><div className="v">Pre-Licensing Course</div></div>
-          <div><div className="k">{S.totalFee}</div><div className="v">Total program fees</div></div>
-          <div><div className="k">3</div><div className="v">{S.name} training centers</div></div>
-          <div><div className="k">{S.examPass}<span style={{color:'var(--gold)'}}>%</span></div><div className="v">First-time exam pass rate</div></div>
+          {S.quickfacts ? S.quickfacts.map((f, i) => (
+            <div key={i}><div className="k">{f.k}{f.suffix && <span style={{color:'var(--gold)'}}>{f.suffix}</span>}</div><div className="v">{f.v}</div></div>
+          )) : (
+            <>
+              <div><div className="k">{S.hours}<span style={{color:'var(--gold)'}}>hr</span></div><div className="v">Pre-Licensing Course</div></div>
+              <div><div className="k">{S.totalFee}</div><div className="v">Total program fees</div></div>
+              <div><div className="k">3</div><div className="v">{S.name} training centers</div></div>
+              <div><div className="k">{S.examPass}<span style={{color:'var(--gold)'}}>%</span></div><div className="v">First-time exam pass rate</div></div>
+            </>
+          )}
         </div>
       </div>
     </section>
@@ -291,6 +274,7 @@ function OtherStates() {
 
 // ─── TRAINING CENTERS ────────────────────────────────────────
 function Centers() {
+  if (!S.centers || !S.centers.length) return null;
   return (
     <section className="section" id="centers">
       <div className="container">
@@ -331,11 +315,13 @@ function Courses() {
       <div className="container">
         <div className="section-head reveal">
           <div className="eyebrow">Courses</div>
-          <h2>{S.name} Course<br/><span className="gold">Options.</span></h2>
-          <p>Three pathways. Pick the one that matches your prior experience. All approved by the {S.name} real estate regulator.</p>
+          <h2>{S.name} Course<br/><span className="gold">{S.courses.length > 1 ? 'Options.' : 'Requirements.'}</span></h2>
+          <p>{S.courses.length > 1
+            ? `Three pathways. Pick the one that matches your prior experience. All approved by the ${S.name} real estate regulator.`
+            : `The DRE requires 135 hours of approved instruction before you can sit for the California salesperson exam. All three courses are included in one self-paced program through ${S.partner}.`}</p>
         </div>
 
-        <div className="course-tabs reveal">
+        <div className="course-tabs reveal" style={S.courses.length > 1 ? undefined : {display:'none'}}>
           {S.courses.map(c => (
             <button
               key={c.id}
@@ -372,19 +358,21 @@ function Courses() {
             <div>
               <h4>Before you start</h4>
               <p className="course-note">{course.note}</p>
-              <div className="course-docs">
-                {course.docs.map((d, i) => (
-                  <a className="course-doc" href={d.href} key={i}>
-                    <span className="course-doc-ic"><Icon.ArrowUR size={12}/></span>
-                    {d.label}
-                  </a>
-                ))}
-              </div>
+              {!!course.docs.length && (
+                <div className="course-docs">
+                  {course.docs.map((d, i) => (
+                    <a className="course-doc" href={d.href} key={i}>
+                      <span className="course-doc-ic"><Icon.ArrowUR size={12}/></span>
+                      {d.label}
+                    </a>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
           <div className="course-detail-cta">
-            <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> Register for Class</a>
+            <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
             <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> Talk to an Advisor</a>
           </div>
         </div>
@@ -395,6 +383,22 @@ function Courses() {
 
 // ─── TUITION ─────────────────────────────────────────────────
 function Tuition() {
+  if (!S.tuition) return (
+    <section className="section" id="tuition">
+      <div className="container">
+        <div className="section-head reveal">
+          <div className="eyebrow">Tuition</div>
+          <h2>Pricing is set by<br/><span className="gold">{S.partner}.</span></h2>
+          <p>California pre-licensing is purchased directly from {S.partner}. Several package options are available at different price points, each covering the three required DRE courses. Current pricing and package details are listed on their site.</p>
+        </div>
+        <div className="reveal" style={{display:'flex', gap:12, flexWrap:'wrap', justifyContent:'center'}}>
+          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> View Packages &amp; Pricing</a>
+          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phone}</a>
+        </div>
+      </div>
+    </section>
+  );
+
   return (
     <section className="section" id="tuition">
       <div className="container">
@@ -430,10 +434,12 @@ function Tuition() {
           ))}
         </div>
 
-        <div className="tuition-faqs reveal">
-          <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> Academy FAQ</a>
-          <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> {S.name} Licensing FAQ</a>
-        </div>
+        {!S.hideFaqs && (
+          <div className="tuition-faqs reveal">
+            <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> Academy FAQ</a>
+            <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> {S.name} Licensing FAQ</a>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -441,6 +447,7 @@ function Tuition() {
 
 // ─── REIMBURSEMENT ───────────────────────────────────────────
 function Reimbursement() {
+  if (S.hideReimbursement) return null;
   return (
     <section className="section dark" id="reimburse">
       <div className="container">
@@ -482,13 +489,15 @@ function SelfPaced() {
       <div className="container">
         <div className="selfpaced reveal">
           <div className="selfpaced-side">
-            <div className="eyebrow">Self-Paced Option</div>
-            <h2>Need flexibility?<br/><span className="gold">Learn online.</span></h2>
-            <p>Self-paced pre-licensing is offered through our online business partner. Study on your schedule, anywhere in {S.name}.</p>
+            <div className="eyebrow">{S.selfPacedOnly ? 'How California Works' : 'Self-Paced Option'}</div>
+            <h2>{S.selfPacedOnly ? <>All self-paced.<br/><span className="gold">Start any time.</span></> : <>Need flexibility?<br/><span className="gold">Learn online.</span></>}</h2>
+            <p>{S.selfPacedOnly
+              ? `California pre-licensing is offered exclusively online and self-paced through ${S.partner}. There are no live or in-person class dates to work around. Enroll when you're ready and study on your own schedule.`
+              : `Self-paced pre-licensing is offered through our online business partner. Study on your schedule, anywhere in ${S.name}.`}</p>
             <p style={{fontSize:13, color:'var(--text-faint)', marginTop:18}}>
               Note: Discount vouchers for Real Estate Academy do not apply to courses offered through our business partner.
             </p>
-            <a className="btn btn-gold" href="#" style={{marginTop:24}}>
+            <a className="btn btn-gold" {...(S.selfPacedOnly ? registerProps : { href: '#' })} style={{marginTop:24}}>
               <Icon.Online size={14}/> Explore Online Education
             </a>
           </div>
@@ -498,7 +507,7 @@ function SelfPaced() {
               <div className="d-bar"><div style={{width:'72%'}}/></div>
             </div>
             <div className="selfpaced-deco-card c2">
-              <div className="d-row"><Icon.Play size={11}/> Live Q&A · Tue 6pm</div>
+              <div className="d-row">{S.selfPacedOnly ? <><Icon.Online size={11}/> Real Estate Practice · 45hr</> : <><Icon.Play size={11}/> Live Q&A · Tue 6pm</>}</div>
               <div className="d-bar"><div style={{width:'40%', background:'var(--warm-white)'}}/></div>
             </div>
             <div className="selfpaced-deco-card c3">
@@ -518,16 +527,17 @@ function GLFinal() {
     <section id="register" className="final">
       <div className="final-bg"></div>
       <div className="container reveal">
-        <div className="eyebrow" style={{justifyContent:'center', display:'flex'}}>Next Class: Open Enrollment</div>
+        <div className="eyebrow" style={{justifyContent:'center', display:'flex'}}>{S.selfPacedOnly ? 'Enroll Any Time' : 'Next Class: Open Enrollment'}</div>
         <h2 style={{marginTop: 22}}>
-          Your seat is waiting.<br/>
-          <span className="gold">Register today.</span>
+          {S.selfPacedOnly ? <>Start when you're ready.<br/><span className="gold">Enroll today.</span></> : <>Your seat is waiting.<br/><span className="gold">Register today.</span></>}
         </h2>
         <p>
-          Pick your campus, pick your course, and start your {S.hours}-hour journey to your {S.name} real estate license. Most students finish in under 60 days.
+          {S.selfPacedOnly
+            ? `Enroll through ${S.partner} and start your ${S.hours}-hour journey to your ${S.name} real estate license. Study at your own pace, from anywhere.`
+            : `Pick your campus, pick your course, and start your ${S.hours}-hour journey to your ${S.name} real estate license. Most students finish in under 60 days.`}
         </p>
         <div className="final-ctas">
-          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> Register for Class</a>
+          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
           <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phone}</a>
           <a className="btn btn-ghost" href={"mailto:" + S.email}><Icon.Send size={15}/> {S.email}</a>
         </div>
