@@ -285,7 +285,7 @@ function GLHero() {
   return (
     <section className="gl-hero">
       <div className="gl-hero-bg">
-        <img className="hero-photo" src="assets/hero-classroom.jpg" alt="" aria-hidden="true"/>
+        <img className="hero-photo" src="assets/hero-classroom.jpg" alt="" aria-hidden="true" fetchpriority="high" decoding="async"/>
       </div>
       <div className="container gl-hero-content">
         <div className="gl-crumbs">

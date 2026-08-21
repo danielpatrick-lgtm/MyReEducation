@@ -57,7 +57,7 @@ function StatePicker() {
 
                 <div className="state-card-shape" aria-hidden="true">
                   {s.photo
-                    ? <img src={s.photo} alt="" className="state-card-photo"/>
+                    ? <img src={s.photo} alt="" className="state-card-photo" loading="lazy" decoding="async"/>
                     : <div className="state-card-photo-placeholder">
                         <span>{s.name}</span>
                         <small>Photo coming soon</small>
