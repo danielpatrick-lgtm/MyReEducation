@@ -8,69 +8,59 @@ const STATE_DATA = {
     hours: "90",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Real Estate Academy's Arizona track is licensed by the Arizona Department of Real Estate. Online, virtual, and in-person classes available, taught by active Arizona instructors.",
-    phone: "602-555-0142",
-    phoneHref: "tel:6025550142",
+    intro: "Arizona Real Estate Education \u2014 Pre-Licensing Education Course. Accredited by the Arizona Department of Real Estate.",
+    phone: "480-344-4082",
+    phoneHref: "tel:4803444082",
+    phoneLabel: "Class Information",
+    altPhone: { label: "School", number: "480-505-6300", href: "tel:4805056300" },
     email: "Arizona@reschool.com",
-    examPass: "89",
-    totalFee: "$439",
+    video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Arizona-How-to-Register-2.mp4", title: "How to Register", blurb: "A short walkthrough of the Arizona registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=36&viewMode=list",
+    selfPacedUrl: "https://bhhsaz.theceshop.com/arizona/pre-licensing/az-salesperson-pre-licensing-cost",
+    hideReimbursement: true,
+    faqs: [
+      { label: 'AZ Academy FAQ',   href: 'https://myreeducation.com/arizona-real-estate-academy-faq/' },
+      { label: 'AZ Licensing FAQ', href: 'https://azre.gov/licensees/original-licensing-information' },
+    ],
+    quickfacts: [
+      { k: "90", suffix: "hr", v: "Pre-licensing course" },
+      { k: "$499", v: "All-in tuition" },
+      { k: "ADRE", v: "Accredited course" },
+    ],
     centers: [
-      { name: "Phoenix Campus",   addr: "2100 N Central Ave Ste 200",     city: "Phoenix, AZ 85004",    tag: "Flagship"  },
-      { name: "Scottsdale Center", addr: "8800 E Raintree Dr Ste 130",     city: "Scottsdale, AZ 85260", tag: "Evenings"  },
-      { name: "Tucson Campus",     addr: "4801 E Broadway Blvd Ste 100",   city: "Tucson, AZ 85711",     tag: "Day + Night" },
+      { name: "Scottsdale Training Center", addr: "16100 N 71st Street, STE 400", city: "Scottsdale, AZ 85254", tag: "Class Information: 480-344-4082" },
     ],
     courses: [
       {
         id: 'principles',
-        badge: 'Most Popular · Full Course',
+        badge: 'Pre-Licensing Course',
         code: '90 HR',
-        title: 'Arizona Real Estate Salesperson Course',
+        title: 'Salesperson Pre-Licensing Course',
         hours: '90 hours',
-        desc: "Satisfies all 90 hours of required real estate instruction approved by ADRE and prepares you for the Arizona salesperson licensing exam.",
+        desc: "This Real Estate training course will satisfy all of the requirements of 90 hours of instruction in required real estate subjects, and help students prepare to take the licensing exam.",
         topics: [
-          'Arizona Real Estate Law & License Law',
-          'Agency Relationships & Disclosure',
-          'Property Ownership & Land Use Controls',
-          'Valuation, Finance & Closings',
-          'Contracts & Risk Management',
-          'Fair Housing & Federal Regulations',
+          'Arizona Real Estate Statues, Commissioner Rules',
+          'Agency Relationships and Managerial Duties',
+          'Contracts and Contract Law',
+          'Property, Estate & Tenancies; Government Rights',
+          'Arizona Water Law, Land Descriptions, Environmental Law',
+          'Encumbrances, Acquisition and Transfer of Title',
+          'Escrow and Settlement; Fair Housing and ADA',
+          'Leases and Leasehold, Arizona Residential Landlord-Tenant Act',
+          'Property Management, Appraisal, and more',
         ],
-        note: "Complete the Academy's enrollment agreement and course catalog before class start. Email signed documents to Arizona@reschool.com for book pickup instructions.",
-        docs: [{ label: 'AZ Enrollment Agreement', href: '#' }, { label: 'Course Catalog', href: '#' }],
-      },
-      {
-        id: 'broker',
-        badge: 'Broker Track',
-        code: '90 HR',
-        title: 'Arizona Real Estate Broker Course',
-        hours: '90 hours',
-        desc: "For licensed Arizona salespersons with 3+ years' experience pursuing a broker license. Covers brokerage management, escrow, and advanced contracts.",
-        topics: [
-          'Brokerage Management & Trust Accounts',
-          'Advanced Contracts & Negotiation',
-          'Property Management & Leasing Law',
-          'Real Estate Finance & Investments',
+        note: "Students will be required to review the course catalog, complete the enrollment agreement and addenda prior to the start of this course. Please arrange to pick up Course Book(s) at least 2 business days before the first day of class.",
+        docs: [
+          { label: 'Course Catalog',       href: 'https://drive.google.com/open?id=11lNn_G12Getg9rziT5lKvmmLD5xPpr5j&usp=drive_fs' },
+          { label: 'Enrollment Agreement', href: 'https://drive.google.com/open?id=1W6YTjrwyufmWFWTZGqkcqdyVEJQqitE-&usp=drive_fs' },
         ],
-        note: "Requires proof of active salesperson license and experience verification. Submit transcripts before enrolling.",
-        docs: [{ label: 'Broker Application Packet', href: '#' }],
-      },
-      {
-        id: 'ce',
-        badge: 'Continuing Education',
-        code: '24 HR',
-        title: 'Arizona Continuing Education',
-        hours: '24 hours / renewal',
-        desc: "Renewal CE for active Arizona agents, covering Agency, Contract Law, Disclosure, Fair Housing, Legal Issues, and Commissioner's Standards.",
-        topics: ['Agency Law', 'Contract Law', 'Disclosure', 'Fair Housing', 'Legal Issues', "Commissioner's Standards"],
-        note: "All 6 mandatory categories included. Certificate issued within 24 hours of completion.",
-        docs: [{ label: 'CE Schedule', href: '#' }],
       },
     ],
+    tuitionNote: "To ensure a classroom spot, it is suggested students enroll and pick up course materials two weeks prior to the beginning of class, but no later than 5 business days prior to the beginning of any class. We accept Visa, MasterCard or Discover Card.",
     tuition: [
-      { code: '90 HR', title: 'Salesperson Course', sub: 'Full pre-licensing',     rows: [['Tuition','$249'],['Texts','$165'],['Admin Fee','$25']], total: '$439', popular: true },
-      { code: '90 HR', title: 'Broker Course',      sub: 'For experienced agents', rows: [['Tuition','$349'],['Texts','$185'],['Admin Fee','$25']], total: '$559' },
-      { code: '24 HR', title: 'Continuing Ed',      sub: 'Active license renewal', rows: [['Tuition','$99'], ['Materials','$25'],['Admin Fee','$25']], total: '$149' },
+      { code: '90 HR', title: 'Salesperson Pre-Licensing', sub: 'Everything included',
+        rows: [['90 Hour pre-licensing course','\u2713'],['6 Hour Contract Writing Boot Camp','\u2713'],['Textbook(s) & course materials','\u2713'],['Admin fees','\u2713']],
+        total: '$499' },
     ],
   },
   california: {
@@ -133,8 +123,24 @@ const STATE_DATA = {
     phone: "702-796-7777",
     phoneHref: "tel:7027967777",
     email: "RESchool@bhhsnv.com",
-    examPass: "92",
-    totalFee: "$459",
+    phoneLabel: "Training Centers",
+    selfPacedUrl: "https://www.theceshop.com/online-education/nevada/real-estate/sales-license-on-or-after-10-1-21-/continuing-education/courses.html",
+    faqs: [
+      { label: 'Academy FAQ',   href: 'https://myreeducation.com/nevada-real-estate-academy-faq/' },
+      { label: 'Licensing FAQ', href: 'https://myreeducation.com/nevada-real-estate-academy-licensing-faq-nv/' },
+    ],
+    quickfacts: [
+      { k: "120", suffix: "hr", v: "Pre-licensing course" },
+      { k: "$459", v: "Total fees" },
+      { k: "3", v: "Nevada training centers" },
+    ],
+    reimbursement: {
+      body: "As a student attending Nevada Real Estate Academy you are invited to consult with the Instructors or Director about your Real Estate Career. Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties however you are free to affiliate with any Broker or Developer of your choice. Berkshire Hathaway HomeServices Nevada Properties offers a Tuition Reimbursement program and Continuous Sales Training for newly licensed affiliates. If you are interested in the tuition reimbursement program please contact us prior to enrolling to discuss this option.",
+      interview: { text: "For a Private Broker Interview, please call Laurette Mormon at 702-796-7777 ext. 5200", href: "tel:7027967777,5200" },
+      division: { text: "If you are licensed in another state or need more information on which course to enroll in please contact the Nevada Real Estate Division at 702-486-4033 or visit them on the web.", label: "Nevada Real Estate Division", href: "http://www.red.state.nv.us/" },
+      fine: "Berkshire Hathaway HomeServices Nevada Properties and Nevada Real Estate Academy do not guarantee placement with any real estate company.",
+    },
+    video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Nevada-How-to-Register.mp4", title: "How to Register", blurb: "A short walkthrough of the Nevada registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=25&viewMode=list",
     centers: [
       { name: 'Henderson Campus',   addr: '3185 St. Rose Parkway Ste #100', city: 'Henderson, NV 89052', tag: 'Flagship'   },
@@ -158,7 +164,10 @@ const STATE_DATA = {
           'Nevada Contracts and Agency',
         ],
         note: "Students must read and complete the Academy's enrollment agreement and course catalog prior to start. Email signed documents and receipts to RESchool@bhhsnv.com, and you'll receive pickup instructions for course books.",
-        docs: [{ label: '120 HR Agreement', href: '#' }, { label: 'Course Catalog', href: '#' }],
+        docs: [
+          { label: '120 HR Agreement', href: 'https://drive.google.com/file/d/18FkdLBMrGzu53UsJuLzRF2cIG7fIVQZo/view' },
+          { label: 'Course Catalog',   href: 'https://drive.google.com/file/d/1iZHdtOkX4AqHbwFxdZI-kVuX9AyZ8gbB/view' },
+        ],
       },
       {
         id: 'law',
@@ -174,7 +183,7 @@ const STATE_DATA = {
           'General Provisions',
         ],
         note: "Complete the Academy's enrollment agreement before class start. Bring documents plus tuition/book receipts to the corporate office.",
-        docs: [{ label: '18 HR Agreement', href: '#' }],
+        docs: [{ label: '18 HR Agreement', href: 'https://drive.google.com/file/d/1oYT8TKl-RpEnNmJj4w1hcG3ld6FHtqv8/view' }],
       },
       {
         id: 'contracts',
@@ -184,8 +193,8 @@ const STATE_DATA = {
         hours: '30 hours',
         desc: "Required additional 30 hours for students who completed the 90-hour Pre-Licensing course before October 1, 2021.",
         topics: ['Nevada Contracts', 'Nevada Agency Relationships', 'Disclosure Requirements', 'NVRED Salesperson application alignment'],
-        note: "Complete the Academy's enrollment agreement before class start. Bring documents plus tuition/book receipts to the corporate office.",
-        docs: [{ label: '30 HR Agreement', href: '#' }],
+        note: "Students will be required to complete the Academy's enrollment agreement prior to the start of this course. Please contact us directly if you are in need of this 30 hour program.",
+        docs: [],
       },
     ],
     tuition: [
@@ -193,6 +202,7 @@ const STATE_DATA = {
       { code: '18 HR',  title: 'Nevada Real Estate Law',     sub: 'Out-of-state bridge',           rows: [['Tuition','$125'],['Texts','$50'], ['Admin Fee','$25']], total: '$200' },
       { code: '30 HR',  title: 'Contracts & Agency',         sub: 'Pre-2021 students',             rows: [['Tuition','$65'], ['Texts','$60'], ['Admin Fee','$25']], total: '$150' },
     ],
+    tuitionNote: "To ensure a classroom spot, it is suggested that students enroll and pick up course materials two weeks prior to the beginning of class, but no later than 3 days prior to the beginning of any class. We accept Visa, MasterCard or Discover Card.",
   },
 };
 
@@ -286,11 +296,13 @@ function Centers() {
     <section className="section" id="centers">
       <div className="container">
         <div className="section-head reveal">
-          <div className="eyebrow">Training Centers</div>
-          <h2>Three campuses.<br/><span className="gold">One license.</span></h2>
-          <p>In-person instruction across {S.name}. Pick the campus that fits your commute. All centers run the same curriculum and same exam prep.</p>
+          <div className="eyebrow">Training Center{S.centers.length > 1 ? 's' : ''}</div>
+          <h2>{S.centers.length > 1 ? <>Three campuses.<br/><span className="gold">One license.</span></> : <>One classroom.<br/><span className="gold">One license.</span></>}</h2>
+          <p>{S.centers.length > 1
+            ? `In-person instruction across ${S.name}. Pick the campus that fits your commute. All centers run the same curriculum and same exam prep.`
+            : `In-person instruction in ${S.centers[0].city.split(',')[0]}. Day and night classes available.`}</p>
         </div>
-        <div className="centers-grid reveal">
+        <div className={"centers-grid reveal" + (S.centers.length === 1 ? " one" : "")}>
           {S.centers.map((c, i) => (
             <a className="center-card" href={S.phoneHref} key={i}>
               <div className="center-num">{String(i+1).padStart(2,'0')}</div>
@@ -307,6 +319,9 @@ function Centers() {
             </a>
           ))}
         </div>
+        {S.altPhone && (
+          <p className="centers-alt reveal">{S.altPhone.label}: <a href={S.altPhone.href}>{S.altPhone.number}</a></p>
+        )}
       </div>
     </section>
   );
@@ -391,6 +406,17 @@ function Courses() {
             <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel || 'Talk to an Advisor'}</a>
           </div>
         </div>
+
+        {S.video && (
+          <div className="course-video reveal">
+            <div className="course-video-side">
+              <div className="eyebrow">Walkthrough</div>
+              <h3>{S.video.title}</h3>
+              <p>{S.video.blurb}</p>
+            </div>
+            <video className="course-video-player" controls preload="metadata" playsInline src={S.video.src}></video>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -417,13 +443,16 @@ function Tuition() {
     </section>
   );
 
+  const single = S.tuition.length === 1;
   return (
     <section className="section" id="tuition">
       <div className="container">
         <div className="section-head reveal">
           <div className="eyebrow">Tuition</div>
-          <h2>Flat pricing.<br/><span className="gold">No surprises.</span></h2>
-          <p>All-in fees for each course. We accept Visa, MasterCard, and Discover. Enroll and pick up materials at least 3 days before class; two weeks recommended to guarantee a seat.</p>
+          <h2>{single ? <>One price.<br/><span className="gold">Everything included.</span></> : <>Flat pricing.<br/><span className="gold">No surprises.</span></>}</h2>
+          <p>{single
+            ? 'Tuition covers the full pre-licensing course, the Contract Writing Boot Camp, textbooks, course materials, and admin fees.'
+            : 'All-in fees for each course, with tuition, texts, and admin fees broken out.'}</p>
         </div>
 
         <div className="tuition-grid reveal">
@@ -452,45 +481,48 @@ function Tuition() {
           ))}
         </div>
 
-        {!S.hideFaqs && (
+        {S.tuitionNote && <p className="tuition-note reveal">{S.tuitionNote}</p>}
+
+        {S.faqs && (
           <div className="tuition-faqs reveal">
-            <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> Academy FAQ</a>
-            <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> {S.name} Licensing FAQ</a>
+            {S.faqs.map((f, i) => (
+              <a className="btn btn-line" href={f.href} target="_blank" rel="noopener noreferrer" key={i}><Icon.ArrowUR size={14}/> {f.label}</a>
+            ))}
           </div>
-        )}      </div>
+        )}
+      </div>
     </section>
   );
 }
 
 // ─── REIMBURSEMENT ───────────────────────────────────────────
 function Reimbursement() {
-  if (S.hideReimbursement) return null;
+  if (S.hideReimbursement || !S.reimbursement) return null;
+  const R = S.reimbursement;
   return (
     <section className="section dark" id="reimburse">
       <div className="container">
         <div className="reimburse-grid">
           <div className="reimburse-body reveal">
             <div className="eyebrow">Tuition Reimbursement</div>
-            <h2>Get your tuition back<br/>when you affiliate with<br/><span className="gold">our partner brokerage.</span></h2>
-            <p style={{color:'var(--text-dim)', fontSize:17, lineHeight:1.55, margin:'24px 0 0', maxWidth:560}}>
-              Real Estate Academy is associated with a leading {S.name} brokerage. You're free to affiliate with any broker, but if you choose our partner, you qualify for our <strong style={{color:'var(--warm-white)'}}>Tuition Reimbursement Program</strong> plus continuous sales training for newly licensed affiliates.
-            </p>
+            <h2>Talk to us before<br/>you enroll about<br/><span className="gold">getting tuition back.</span></h2>
+            <p style={{color:'var(--text-dim)', fontSize:17, lineHeight:1.55, margin:'24px 0 0', maxWidth:560}}>{R.body}</p>
             <p style={{color:'var(--text-dim)', fontSize:14, lineHeight:1.55, margin:'18px 0 0', maxWidth:560}}>
-              For a private broker interview, call <strong style={{color:'var(--warm-white)'}}>{S.phone}</strong>.
+              {R.division.text.split(R.division.label)[0]}<a href={R.division.href} target="_blank" rel="noopener noreferrer" style={{color:'var(--gold)'}}>{R.division.label}</a>
             </p>
             <div style={{marginTop:32, display:'flex', gap:12, flexWrap:'wrap'}}>
-              <a className="btn btn-gold" href={S.phoneHref}><Icon.Phone size={14}/> Schedule a Broker Interview</a>
-              <a className="btn btn-ghost" href="#"><Icon.ArrowUR size={14}/> Learn More</a>
+              <a className="btn btn-gold" href={R.interview.href}><Icon.Phone size={14}/> Schedule a Broker Interview</a>
             </div>
+            <p style={{color:'var(--text-faint)', fontSize:13, lineHeight:1.55, margin:'16px 0 0', maxWidth:560}}>{R.interview.text}</p>
           </div>
 
           <div className="reimburse-card reveal">
             <div className="reimburse-card-label">Program at a Glance</div>
-            <div className="reimburse-card-stat"><span className="k">100<span style={{color:'var(--gold)'}}>%</span></span><span className="v">Tuition reimbursed*</span></div>
+            <div className="reimburse-card-stat"><span className="k">Yes</span><span className="v">Tuition reimbursement program*</span></div>
             <div className="reimburse-card-stat"><span className="k">Free</span><span className="v">Continuous sales training</span></div>
-            <div className="reimburse-card-stat"><span className="k">∞</span><span className="v">Broker mentorship + coaching</span></div>
+            <div className="reimburse-card-stat"><span className="k">Open</span><span className="v">Affiliate with any broker you choose</span></div>
             <div className="reimburse-fine">
-              *Conditions apply. Contact us prior to enrolling to discuss program eligibility. Our partner brokerage and Real Estate Academy do not guarantee placement with any real estate company.
+              *Contact us prior to enrolling to discuss this option. {R.fine}
             </div>
           </div>
         </div>
@@ -512,9 +544,9 @@ function SelfPaced() {
               ? `California pre-licensing is offered exclusively online and self-paced through ${S.partner}. There are no live or in-person class dates to work around. Enroll when you're ready and study on your own schedule.`
               : `Self-paced pre-licensing is offered through our online business partner. Study on your schedule, anywhere in ${S.name}.`}</p>
             <p style={{fontSize:13, color:'var(--text-faint)', marginTop:18}}>
-              Note: Discount vouchers for Real Estate Academy do not apply to courses offered through our business partner.
+              Please note: discount vouchers for {S.name === 'Nevada' ? 'the Nevada Real Estate Academy' : 'the Arizona Real Estate Education School'} do not apply for these online courses offered through our Business Partner.
             </p>
-            <a className="btn btn-gold" {...(S.selfPacedOnly ? registerProps : { href: '#' })} style={{marginTop:24}}>
+            <a className="btn btn-gold" {...(S.selfPacedOnly ? registerProps : (S.selfPacedUrl ? { href: S.selfPacedUrl, target: '_blank', rel: 'noopener noreferrer' } : { href: '#' }))} style={{marginTop:24}}>
               <Icon.Online size={14}/> Explore Online Education
             </a>
           </div>
@@ -524,12 +556,11 @@ function SelfPaced() {
               <div className="d-bar"><div style={{width:'72%'}}/></div>
             </div>
             <div className="selfpaced-deco-card c2">
-              <div className="d-row">{S.selfPacedOnly ? <><Icon.Online size={11}/> Real Estate Practice · 45hr</> : <><Icon.Play size={11}/> Live Q&A · Tue 6pm</>}</div>
+              <div className="d-row">{S.selfPacedOnly ? <><Icon.Online size={11}/> Real Estate Practice · 45hr</> : <><Icon.Online size={11}/> Module 04 · Contracts</>}</div>
               <div className="d-bar"><div style={{width:'40%', background:'var(--warm-white)'}}/></div>
             </div>
             <div className="selfpaced-deco-card c3">
-              <div className="d-row"><Icon.Sparkle size={11}/> Mock Exam · 92/100</div>
-              <div className="d-stars">★★★★★</div>
+              <div className="d-row"><Icon.Sparkle size={11}/> Study on your schedule</div>
             </div>
           </div>
         </div>
@@ -551,7 +582,9 @@ function GLFinal() {
         <p>
           {S.selfPacedOnly
             ? `Enroll through ${S.partner} and start your ${S.hours}-hour journey to your ${S.name} real estate license. Study at your own pace, from anywhere.`
-            : `Pick your campus, pick your course, and start your ${S.hours}-hour journey to your ${S.name} real estate license. Most students finish in under 60 days.`}
+            : S.centers && S.centers.length > 1
+              ? `Pick your campus, pick your course, and start your ${S.hours}-hour journey to your ${S.name} real estate license.`
+              : `Enroll in the ${S.hours}-hour course and start your path to a ${S.name} real estate license.`}
         </p>
         <div className="final-ctas">
           <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>

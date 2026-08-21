@@ -144,6 +144,10 @@
 @media (max-width: 780px) { .gl-quickfacts { grid-template-columns: repeat(2, 1fr); gap: 24px; } }
 
 /* ─── TRAINING CENTERS ───────────────────────────────────── */
+.centers-grid.one{grid-template-columns:minmax(0,460px);justify-content:center}
+.centers-alt{margin-top:22px;text-align:center;font-size:14px;color:var(--text-faint)}
+.centers-alt a{color:var(--gold);text-decoration:none}
+.centers-alt a:hover{text-decoration:underline}
 .centers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -396,6 +400,12 @@
   color: var(--gold);
 }
 
+.course-video{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:40px;align-items:center;margin-top:56px;padding:34px;border-radius:18px;background:rgba(255,255,255,0.025);border:1px solid rgba(199,203,209,0.16)}
+.course-video-side h3{font-size:30px;line-height:1.15;margin:14px 0 12px;letter-spacing:-0.02em}
+.course-video-side p{font-size:15px;line-height:1.65;color:var(--text-soft);max-width:38ch}
+.course-video-player{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;border:1px solid rgba(199,203,209,0.22);display:block}
+@media(max-width:900px){.course-video{grid-template-columns:1fr;gap:26px;padding:24px}}
+
 .course-detail-cta {
   display: flex;
   gap: 12px;
@@ -406,6 +416,8 @@
 }
 
 /* ─── TUITION ────────────────────────────────────────────── */
+.tuition-grid:has(> .tuition-card:only-child){grid-template-columns:minmax(0,460px);justify-content:center}
+.tuition-note{margin:40px auto 0;max-width:760px;text-align:center;font-size:14px;line-height:1.65;color:var(--text-faint)}
 .tuition-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
