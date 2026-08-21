@@ -30,7 +30,7 @@ function PMHero() {
         <div className="eyebrow">Property Management · Pre-Permit Course</div>
         <h1>Manage property.<br/><span className="gold">Get permitted.</span></h1>
         <p className="gl-hero-sub">
-          The 24-hour Nevada Property Management Pre-Permit Course, taught live, in person or via Zoom. Satisfies the entire instruction requirement and prepares you for the licensing examination.
+          The 24-hour Nevada Property Management Pre-Permit Course, taught live, in person or via Zoom. Satisfies the entire instruction requirement and prepares you to sit for the permit examination.
         </p>
 
         <div className="pm-accreditation">
@@ -99,7 +99,7 @@ function PMOverview() {
           </div>
 
           <p className="course-detail-desc">
-            This course satisfies the entire requirement of 24 hours of instruction in required property management subjects and will help the student prepare to take the licensing examination.
+            This course satisfies the entire requirement of 24 hours of instruction in required property management subjects and will help the student prepare to sit for the permit examination.
           </p>
 
           <div className="pm-course-grid">
@@ -127,7 +127,7 @@ function PMOverview() {
 
           <div className="course-detail-cta">
             <a className="btn btn-gold" href={REGISTER_URL}><Icon.Rocket size={14}/> Register for Class</a>
-            <a className="btn btn-ghost" href={PM.phoneHref}><Icon.Phone size={14}/> Talk to an Advisor</a>
+            <a className="btn btn-ghost" href={PM.phoneHref}><Icon.Phone size={14}/> {PM.phone}</a>
           </div>
         </div>
       </div>
@@ -235,7 +235,6 @@ function PMApp() {
       <PMFinal/>
       <Footer/>
       <StickyCTA/>
-      <ChatBubble/>
     </>
   );
 }

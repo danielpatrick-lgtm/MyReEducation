@@ -118,7 +118,6 @@ function CommunitySection() {
           </div>
           <div style={{display:'flex', gap:10}}>
             <a className="btn btn-ghost" href="#"><Icon.Instagram size={14}/> Instagram</a>
-            <a className="btn btn-ghost" href="#"><Icon.TikTok size={14}/> TikTok</a>
           </div>
         </div>
 
@@ -151,7 +150,6 @@ function CommunitySection() {
           <div className="left">
             <div className="icons">
               <Icon.Instagram size={22}/>
-              <Icon.TikTok size={22}/>
             </div>
             <div>
               <div className="handle-big">Follow @RealEstateAcademy</div>
@@ -202,7 +200,7 @@ function FinalCTA() {
         <div className="final-ctas">
           <a className="btn btn-gold" href="#states"><Icon.Rocket size={15}/> Enroll Now</a>
           <a className="btn btn-ghost" href="#states"><Icon.Calendar size={15}/> Upcoming Classes</a>
-          <a className="btn btn-ghost" href="tel:7027967777"><Icon.Phone size={15}/> Talk to an Advisor</a>
+          <a className="btn btn-ghost" href="tel:7029157755"><Icon.Phone size={15}/> 702-915-7755</a>
         </div>
       </div>
     </section>
@@ -211,9 +209,9 @@ function FinalCTA() {
 
 // ─── FOOTER ─────────────────────────────────────────────────
 const FOOTER_CONTACT = {
-  arizona:    { phone: '602-555-0142', href: 'tel:6025550142', ce: 'Continuing Education Arizona.html' },
+  arizona:    { phone: '480-344-4082', href: 'tel:4803444082', ce: 'Continuing Education Arizona.html' },
   california: { phone: '877-373-4542', href: 'tel:8773734542', ce: 'Continuing Education California.html' },
-  nevada:     { phone: '702-796-7777', href: 'tel:7027967777', ce: 'Continuing Education Nevada.html' },
+  nevada:     { phone: '702-915-7755', href: 'tel:7029157755', ce: 'Continuing Education Nevada.html' },
 };
 
 function Footer() {
@@ -257,7 +255,6 @@ function Footer() {
           <div>
             <h4>Connect</h4>
             <ul>
-              <li><a href={contact.href}>Talk to an Advisor</a></li>
               <li><a href={contact.href}>{contact.phone}</a></li>
             </ul>
           </div>

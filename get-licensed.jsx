@@ -8,12 +8,21 @@ const STATE_DATA = {
     hours: "90",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Arizona Real Estate Education \u2014 Pre-Licensing Education Course. Accredited by the Arizona Department of Real Estate.",
+    intro: "Arizona Real Estate Education \u2014 Pre-Licensing Education Course. All 90 hours are taught live online over Zoom by experienced instructors. Accredited by the Arizona Department of Real Estate.",
+    accreditation: "Accredited by the Arizona Department of Real Estate",
     phone: "480-344-4082",
     phoneHref: "tel:4803444082",
     phoneLabel: "Class Information",
     altPhone: { label: "School", number: "480-505-6300", href: "tel:4805056300" },
-    email: "Arizona@reschool.com",
+    email: "reschool@bhhsaz.com",
+    // Required by Arizona Administrative Code R4-28-503(D) on all advertising of
+    // Department-approved courses: school name, number, phone, email, administrator.
+    compliance: {
+      school: "Arizona Real Estate Education",
+      number: "S19-0001",
+      address: "16100 N 71st Street, Ste. 400, Scottsdale, AZ 85254",
+      admins: ["Forrest Barbee", "Christina Rogowski", "Mary Sand"],
+    },
     video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Arizona-How-to-Register-2.mp4", title: "How to Register", blurb: "A short walkthrough of the Arizona registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=36&viewMode=list",
     selfPacedUrl: "https://bhhsaz.theceshop.com/arizona/pre-licensing/az-salesperson-pre-licensing-cost",
@@ -23,12 +32,17 @@ const STATE_DATA = {
       { label: 'AZ Licensing FAQ', href: 'https://azre.gov/licensees/original-licensing-information' },
     ],
     quickfacts: [
-      { k: "90", suffix: "hr", v: "Pre-licensing course" },
+      { k: "90", suffix: "hr", v: "Live online over Zoom" },
       { k: "$499", v: "All-in tuition" },
       { k: "ADRE", v: "Accredited course" },
     ],
+    centersCopy: {
+      eyebrow: "How Classes Are Held",
+      title: ["Live online.", "One office."],
+      blurb: "All 90 hours are taught live over Zoom, Monday through Friday, in morning, afternoon, and evening sections. You get a live instructor without the commute. You come to our Scottsdale office in person for the Contract Writing class and for testing.",
+    },
     centers: [
-      { name: "Scottsdale Training Center", addr: "16100 N 71st Street, STE 400", city: "Scottsdale, AZ 85254", tag: "Class Information: 480-344-4082" },
+      { name: "Scottsdale Office", addr: "16100 N 71st Street, Ste. 400", city: "Scottsdale, AZ 85254", tag: "In person: Contract Writing \u0026 testing" },
     ],
     courses: [
       {
@@ -48,6 +62,13 @@ const STATE_DATA = {
           'Escrow and Settlement; Fair Housing and ADA',
           'Leases and Leasehold, Arizona Residential Landlord-Tenant Act',
           'Property Management, Appraisal, and more',
+        ],
+        includes: [
+          'All course textbooks',
+          'The mandatory 6-hour Contract Writing class',
+          'Testing',
+          'Digital flashcards (Quizlet)',
+          'Study materials and instructional videos',
         ],
         note: "Students will be required to review the course catalog, complete the enrollment agreement and addenda prior to the start of this course. Please arrange to pick up Course Book(s) at least 2 business days before the first day of class.",
         docs: [
@@ -119,12 +140,26 @@ const STATE_DATA = {
     hours: "120",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Real Estate Academy's Nevada track is licensed by the Commission on Postsecondary Education and accredited by the Nevada Real Estate Commission. Night and day classes available across three Las Vegas–area training centers.",
-    phone: "702-796-7777",
-    phoneHref: "tel:7027967777",
+    intro: "Real Estate Academy's Nevada track is licensed to operate by the Commission on Postsecondary Education and approved by the Nevada Real Estate Division. Pre-licensing classes are taught live and in person at our Las Vegas–area training centers.",
+    accreditation: "Licensed to operate by the Commission on Postsecondary Education. Approved by the Nevada Real Estate Division.",
+    phone: "702-915-7755",
+    phoneHref: "tel:7029157755",
     email: "RESchool@bhhsnv.com",
-    phoneLabel: "Training Centers",
-    selfPacedUrl: "https://www.theceshop.com/online-education/nevada/real-estate/sales-license-on-or-after-10-1-21-/continuing-education/courses.html",
+    phoneLabel: "Direct Line",
+    hideReimbursement: true,
+    grouponUrl: "https://www.groupon.com/deals/berkshire-hathaway-home-services-nevada-properties-1",
+    postLicensing: {
+      eyebrow: "Post-Licensing",
+      title: ["Newly licensed?", "Your next class."],
+      blurb: "Nevada post-licensing education is taught live and in person at Nevada Real Estate Academy. Check the calendar for upcoming dates, times, and registration.",
+      url: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=28&drop_in=0&viewMode=list",
+    },
+    selfPacedCopy: {
+      eyebrow: "Online Options",
+      title: ["Pre-licensing is in person.", "Online courses run through The CE Shop."],
+      blurb: "Nevada pre-licensing classes are taught live and in person only. Online, self-paced coursework is available through our business partner, The CE Shop.",
+    },
+    selfPacedUrl: "http://www.theceshop.com/",
     faqs: [
       { label: 'Academy FAQ',   href: 'https://myreeducation.com/nevada-real-estate-academy-faq/' },
       { label: 'Licensing FAQ', href: 'https://myreeducation.com/nevada-real-estate-academy-licensing-faq-nv/' },
@@ -132,20 +167,26 @@ const STATE_DATA = {
     quickfacts: [
       { k: "120", suffix: "hr", v: "Pre-licensing course" },
       { k: "$459", v: "Total fees" },
-      { k: "3", v: "Nevada training centers" },
+      { k: "2", v: "Nevada training centers" },
     ],
-    reimbursement: {
-      body: "As a student attending Nevada Real Estate Academy you are invited to consult with the Instructors or Director about your Real Estate Career. Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties however you are free to affiliate with any Broker or Developer of your choice. Berkshire Hathaway HomeServices Nevada Properties offers a Tuition Reimbursement program and Continuous Sales Training for newly licensed affiliates. If you are interested in the tuition reimbursement program please contact us prior to enrolling to discuss this option.",
+    career: {
+      eyebrow: "After You Pass",
+      title: ["Licensed is the start.", "The Academy is next."],
+      body: "As a student attending Nevada Real Estate Academy you are invited to consult with the Instructors or Director about your Real Estate Career. Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties however you are free to affiliate with any Broker or Developer of your choice. Berkshire Hathaway HomeServices Nevada Properties offers Continuous Sales Training for newly licensed affiliates through the Berkshire Hathaway HomeServices Academy.",
       interview: { text: "For a Private Broker Interview, please call Laurette Mormon at 702-796-7777 ext. 5200", href: "tel:7027967777,5200" },
       division: { text: "If you are licensed in another state or need more information on which course to enroll in please contact the Nevada Real Estate Division at 702-486-4033 or visit them on the web.", label: "Nevada Real Estate Division", href: "http://www.red.state.nv.us/" },
       fine: "Berkshire Hathaway HomeServices Nevada Properties and Nevada Real Estate Academy do not guarantee placement with any real estate company.",
     },
     video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Nevada-How-to-Register.mp4", title: "How to Register", blurb: "A short walkthrough of the Nevada registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=25&viewMode=list",
+    centersCopy: {
+      eyebrow: "Training Centers",
+      title: ["Two campuses.", "One license."],
+      blurb: "Nevada pre-licensing is taught live and in person. Pick the campus that fits your commute \u2014 both run the same curriculum and the same exam prep.",
+    },
     centers: [
-      { name: 'Henderson Campus',   addr: '3185 St. Rose Parkway Ste #100', city: 'Henderson, NV 89052', tag: 'Flagship'   },
-      { name: 'West Sunset Campus', addr: '8850 W Sunset Suite #200',       city: 'Las Vegas, NV 89148', tag: 'Evenings'   },
-      { name: 'Center Crossing',    addr: '1490 Center Crossing Rd',        city: 'Las Vegas, NV 89144', tag: 'Day + Night' },
+      { name: 'Henderson Campus',   addr: '3185 St. Rose Parkway Ste #100', city: 'Henderson, NV 89052' },
+      { name: 'West Sunset Campus', addr: '8850 W Sunset Suite #200',       city: 'Las Vegas, NV 89148' },
     ],
     courses: [
       {
@@ -165,8 +206,8 @@ const STATE_DATA = {
         ],
         note: "Students must read and complete the Academy's enrollment agreement and course catalog prior to start. Email signed documents and receipts to RESchool@bhhsnv.com, and you'll receive pickup instructions for course books.",
         docs: [
-          { label: '120 HR Agreement', href: 'https://drive.google.com/file/d/18FkdLBMrGzu53UsJuLzRF2cIG7fIVQZo/view' },
-          { label: 'Course Catalog',   href: 'https://drive.google.com/file/d/1iZHdtOkX4AqHbwFxdZI-kVuX9AyZ8gbB/view' },
+          { label: '120 HR Enrollment Agreement', href: 'https://drive.google.com/file/d/1J1zopLZcXAi_j_S0bDwrcxopcbEXXouB/view?pli=1' },
+          { label: 'Course Catalog',              href: 'https://drive.google.com/file/d/1iZHdtOkX4AqHbwFxdZI-kVuX9AyZ8gbB/view?pli=1' },
         ],
       },
       {
@@ -292,21 +333,22 @@ function OtherStates() {
 // ─── TRAINING CENTERS ────────────────────────────────────────
 function Centers() {
   if (!S.centers || !S.centers.length) return null;
+  const C = S.centersCopy;
   return (
     <section className="section" id="centers">
       <div className="container">
         <div className="section-head reveal">
-          <div className="eyebrow">Training Center{S.centers.length > 1 ? 's' : ''}</div>
-          <h2>{S.centers.length > 1 ? <>Three campuses.<br/><span className="gold">One license.</span></> : <>One classroom.<br/><span className="gold">One license.</span></>}</h2>
-          <p>{S.centers.length > 1
-            ? `In-person instruction across ${S.name}. Pick the campus that fits your commute. All centers run the same curriculum and same exam prep.`
-            : `In-person instruction in ${S.centers[0].city.split(',')[0]}. Day and night classes available.`}</p>
+          <div className="eyebrow">{C ? C.eyebrow : `Training Center${S.centers.length > 1 ? 's' : ''}`}</div>
+          <h2>{C
+            ? <>{C.title[0]}<br/><span className="gold">{C.title[1]}</span></>
+            : <>One classroom.<br/><span className="gold">One license.</span></>}</h2>
+          <p>{C ? C.blurb : `In-person instruction in ${S.centers[0].city.split(',')[0]}.`}</p>
         </div>
         <div className={"centers-grid reveal" + (S.centers.length === 1 ? " one" : "")}>
           {S.centers.map((c, i) => (
             <a className="center-card" href={S.phoneHref} key={i}>
               <div className="center-num">{String(i+1).padStart(2,'0')}</div>
-              <div className="center-tag">{c.tag}</div>
+              {c.tag && <div className="center-tag">{c.tag}</div>}
               <h3>{c.name}</h3>
               <div className="center-addr">
                 <div>{c.addr}</div>
@@ -338,9 +380,11 @@ function Courses() {
         <div className="section-head reveal">
           <div className="eyebrow">Courses</div>
           <h2>{S.name} Course<br/><span className="gold">{S.courses.length > 1 ? 'Options.' : 'Requirements.'}</span></h2>
-          <p>{S.courses.length > 1
-            ? `Three pathways. Pick the one that matches your prior experience. All approved by the ${S.name} real estate regulator.`
-            : `The DRE requires 135 hours of approved instruction before you can sit for the California salesperson exam. All three courses are included in one self-paced program through ${S.partner}.`}</p>
+          <p>{S.selfPacedOnly
+            ? `The DRE requires 135 hours of approved instruction before you can sit for the California salesperson exam. All three courses are included in one self-paced program through ${S.partner}.`
+            : S.courses.length > 1
+              ? 'Three pathways. Pick the one that matches your prior experience. The 120-hour course covers the full pre-licensing requirement; the 18-hour and 30-hour courses are bridge options for students who qualify.'
+              : `One course covers the full ${S.hours}-hour requirement.`}</p>
         </div>
 
         <div className="course-tabs reveal" style={S.courses.length > 1 ? undefined : {display:'none'}}>
@@ -361,7 +405,7 @@ function Courses() {
             <div>
               <div className="course-detail-badge">{course.badge}</div>
               <h3>{course.title}</h3>
-              <div className="course-detail-hours">{course.hours} · Approved by {S.name} regulator</div>
+              <div className="course-detail-hours">{course.hours} · {S.accreditation || `Approved by ${S.name} regulator`}</div>
             </div>
             <div className="course-detail-code">{course.code}</div>
           </div>
@@ -376,6 +420,14 @@ function Courses() {
                   <li key={i}><Icon.Check size={14}/> {t}</li>
                 ))}
               </ul>
+              {!!course.includes && (
+                <>
+                  <h4 style={{marginTop:26}}>What's included</h4>
+                  <ul className="course-topics">
+                    {course.includes.map((t, i) => <li key={i}><Icon.Check size={14}/> {t}</li>)}
+                  </ul>
+                </>
+              )}
             </div>
             <div>
               <h4>Before you start</h4>
@@ -391,7 +443,7 @@ function Courses() {
               {!!course.docs.length && (
                 <div className="course-docs">
                   {course.docs.map((d, i) => (
-                    <a className="course-doc" href={d.href} key={i}>
+                    <a className="course-doc" href={d.href} target="_blank" rel="noopener noreferrer" key={i}>
                       <span className="course-doc-ic"><Icon.ArrowUR size={12}/></span>
                       {d.label}
                     </a>
@@ -403,7 +455,7 @@ function Courses() {
 
           <div className="course-detail-cta">
             <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
-            <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel || 'Talk to an Advisor'}</a>
+            <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel ? `${S.phoneLabel} · ${S.phone}` : S.phone}</a>
           </div>
         </div>
 
@@ -488,6 +540,9 @@ function Tuition() {
             {S.faqs.map((f, i) => (
               <a className="btn btn-line" href={f.href} target="_blank" rel="noopener noreferrer" key={i}><Icon.ArrowUR size={14}/> {f.label}</a>
             ))}
+            {S.grouponUrl && (
+              <a className="btn btn-line" href={S.grouponUrl} target="_blank" rel="noopener noreferrer"><Icon.ArrowUR size={14}/> Groupon Offer</a>
+            )}
           </div>
         )}
       </div>
@@ -497,15 +552,15 @@ function Tuition() {
 
 // ─── REIMBURSEMENT ───────────────────────────────────────────
 function Reimbursement() {
-  if (S.hideReimbursement || !S.reimbursement) return null;
-  const R = S.reimbursement;
+  const R = S.career;
+  if (!R) return null;
   return (
-    <section className="section dark" id="reimburse">
+    <section className="section dark" id="career">
       <div className="container">
         <div className="reimburse-grid">
           <div className="reimburse-body reveal">
-            <div className="eyebrow">Tuition Reimbursement</div>
-            <h2>Talk to us before<br/>you enroll about<br/><span className="gold">getting tuition back.</span></h2>
+            <div className="eyebrow">{R.eyebrow}</div>
+            <h2>{R.title[0]}<br/><span className="gold">{R.title[1]}</span></h2>
             <p style={{color:'var(--text-dim)', fontSize:17, lineHeight:1.55, margin:'24px 0 0', maxWidth:560}}>{R.body}</p>
             <p style={{color:'var(--text-dim)', fontSize:14, lineHeight:1.55, margin:'18px 0 0', maxWidth:560}}>
               {R.division.text.split(R.division.label)[0]}<a href={R.division.href} target="_blank" rel="noopener noreferrer" style={{color:'var(--gold)'}}>{R.division.label}</a>
@@ -518,11 +573,11 @@ function Reimbursement() {
 
           <div className="reimburse-card reveal">
             <div className="reimburse-card-label">Program at a Glance</div>
-            <div className="reimburse-card-stat"><span className="k">Yes</span><span className="v">Tuition reimbursement program*</span></div>
-            <div className="reimburse-card-stat"><span className="k">Free</span><span className="v">Continuous sales training</span></div>
+            <div className="reimburse-card-stat"><span className="k">BHHS</span><span className="v">Academy sales training for new affiliates</span></div>
             <div className="reimburse-card-stat"><span className="k">Open</span><span className="v">Affiliate with any broker you choose</span></div>
+            <div className="reimburse-card-stat"><span className="k">1:1</span><span className="v">Private broker interview on request</span></div>
             <div className="reimburse-fine">
-              *Contact us prior to enrolling to discuss this option. {R.fine}
+              {R.fine}
             </div>
           </div>
         </div>
@@ -533,16 +588,19 @@ function Reimbursement() {
 
 // ─── SELF-PACED ──────────────────────────────────────────────
 function SelfPaced() {
+  const P = S.selfPacedCopy;
   return (
     <section className="section" id="selfpaced">
       <div className="container">
         <div className="selfpaced reveal">
           <div className="selfpaced-side">
-            <div className="eyebrow">{S.selfPacedOnly ? 'How California Works' : 'Self-Paced Option'}</div>
-            <h2>{S.selfPacedOnly ? <>All self-paced.<br/><span className="gold">Start any time.</span></> : <>Need flexibility?<br/><span className="gold">Learn online.</span></>}</h2>
-            <p>{S.selfPacedOnly
+            <div className="eyebrow">{P ? P.eyebrow : (S.selfPacedOnly ? 'How California Works' : 'Self-Paced Option')}</div>
+            <h2>{P
+              ? <>{P.title[0]}<br/><span className="gold">{P.title[1]}</span></>
+              : (S.selfPacedOnly ? <>All self-paced.<br/><span className="gold">Start any time.</span></> : <>Need flexibility?<br/><span className="gold">Learn online.</span></>)}</h2>
+            <p>{P ? P.blurb : (S.selfPacedOnly
               ? `California pre-licensing is offered exclusively online and self-paced through ${S.partner}. There are no live or in-person class dates to work around. Enroll when you're ready and study on your own schedule.`
-              : `Self-paced pre-licensing is offered through our online business partner. Study on your schedule, anywhere in ${S.name}.`}</p>
+              : `Self-paced pre-licensing is offered through our online business partner. Study on your schedule, anywhere in ${S.name}.`)}</p>
             <p style={{fontSize:13, color:'var(--text-faint)', marginTop:18}}>
               Please note: discount vouchers for {S.name === 'Nevada' ? 'the Nevada Real Estate Academy' : 'the Arizona Real Estate Education School'} do not apply for these online courses offered through our Business Partner.
             </p>
@@ -596,11 +654,67 @@ function GLFinal() {
   );
 }
 
+function PostLicensing() {
+  const P = S.postLicensing;
+  if (!P) return null;
+  return (
+    <section className="section" id="postlicensing">
+      <div className="container">
+        <div className="section-head reveal">
+          <div className="eyebrow">{P.eyebrow}</div>
+          <h2>{P.title[0]}<br/><span className="gold">{P.title[1]}</span></h2>
+          <p>{P.blurb}</p>
+        </div>
+        <div className="reveal" style={{display:'flex', gap:12, flexWrap:'wrap', justifyContent:'center'}}>
+          <a className="btn btn-gold" href={P.url} target="_blank" rel="noopener noreferrer"><Icon.Calendar size={14}/> View Post-Licensing Calendar</a>
+          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel} · {S.phone}</a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// School disclosure required by Arizona Administrative Code R4-28-503(D).
+function SchoolDisclosure() {
+  const C = S.compliance;
+  if (!C) return null;
+  return (
+    <section className="school-disclosure">
+      <div className="container">
+        <div className="sd-grid">
+          <div>
+            <div className="sd-label">School</div>
+            <div className="sd-name">{C.school}</div>
+            <div className="sd-num">School No. {C.number}</div>
+          </div>
+          <div>
+            <div className="sd-label">Contact</div>
+            <ul className="sd-list">
+              <li><a href={S.phoneHref}>{S.phoneLabel}: {S.phone}</a></li>
+              {S.altPhone && <li><a href={S.altPhone.href}>{S.altPhone.label}: {S.altPhone.number}</a></li>}
+              <li><a href={"mailto:" + S.email}>{S.email}</a></li>
+              <li>{C.address}</li>
+            </ul>
+          </div>
+          <div>
+            <div className="sd-label">School Administrators</div>
+            <ul className="sd-list">
+              {C.admins.map((a, i) => <li key={i}>{a}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 window.GLHero = GLHero;
 window.OtherStates = OtherStates;
 window.Centers = Centers;
 window.Courses = Courses;
 window.Tuition = Tuition;
 window.Reimbursement = Reimbursement;
+window.PostLicensing = PostLicensing;
+window.SchoolDisclosure = SchoolDisclosure;
 window.SelfPaced = SelfPaced;
 window.GLFinal = GLFinal;

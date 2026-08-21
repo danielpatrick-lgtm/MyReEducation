@@ -19,10 +19,11 @@ function GLApp() {
       <Tuition/>
       <Reimbursement/>
       <SelfPaced/>
+      <PostLicensing/>
       <GLFinal/>
+      <SchoolDisclosure/>
       <Footer/>
       <StickyCTA/>
-      <ChatBubble/>
       <CareerQuiz/>
     </>
   );

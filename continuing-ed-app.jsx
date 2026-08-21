@@ -21,7 +21,6 @@ function CEApp() {
       <CEFinal/>
       <Footer/>
       <StickyCTA/>
-      <ChatBubble/>
       <CareerQuiz/>
     </>
   );

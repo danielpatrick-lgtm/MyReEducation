@@ -137,11 +137,13 @@ function CareerQuiz() {
   };
 
   const computeWinner = () => {
+    // Weight the final question double so five answers across four archetypes
+    // rarely tie; ties then resolve to the most recent matching answer.
     const counts = { closer: 0, luxury: 0, investor: 0, builder: 0 };
-    answers.forEach(t => { counts[t]++; });
-    let winner = 'closer', max = -1;
-    // Iterate in question-encounter order so ties resolve to whichever appeared first
-    answers.forEach(t => {
+    answers.forEach((t, i) => { counts[t] += (i === answers.length - 1 ? 2 : 1); });
+    let winner = answers[answers.length - 1] || 'closer';
+    let max = counts[winner];
+    Object.keys(counts).forEach(t => {
       if (counts[t] > max) { max = counts[t]; winner = t; }
     });
     return ARCHETYPES[winner];

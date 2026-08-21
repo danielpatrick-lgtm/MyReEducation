@@ -31,16 +31,16 @@ function Hero() {
 
           <div className="hero-meta">
             <div className="hero-meta-row">
-              <span className="k">1,200<span style={{color:'var(--gold)'}}>+</span></span>
-              <span className="v">Students licensed since 2019</span>
+              <span className="k">3<span style={{color:'var(--gold)'}}>states</span></span>
+              <span className="v">Arizona, California, and Nevada</span>
             </div>
             <div className="hero-meta-row">
-              <span className="k">60<span style={{color:'var(--gold)'}}>d</span></span>
-              <span className="v">Average time from start to license</span>
+              <span className="k">Live<span style={{color:'var(--gold)'}}>+</span></span>
+              <span className="v">Instructor-led and self-paced options</span>
             </div>
             <div className="hero-meta-row">
-              <span className="k">4.9<span style={{color:'var(--gold)'}}>/5</span></span>
-              <span className="v">Average student rating</span>
+              <span className="k">BHHS<span style={{color:'var(--gold)'}}>.</span></span>
+              <span className="v">Berkshire Hathaway HomeServices schools</span>
             </div>
           </div>
         </div>
@@ -48,8 +48,8 @@ function Hero() {
 
       <div className="hero-stats">
         <div className="container">
-          <div className="stat"><div className="ic"><Icon.Users size={15}/></div><div><div className="num">1,200+</div>Students Licensed</div></div>
-          <div className="stat"><div className="ic"><Icon.Online size={15}/></div><div><div className="num">Flexible</div>Online + In-Person</div></div>
+          <div className="stat"><div className="ic"><Icon.Users size={15}/></div><div><div className="num">Live</div>Instructor-Led Classes</div></div>
+          <div className="stat"><div className="ic"><Icon.Online size={15}/></div><div><div className="num">Zoom</div>Available in Arizona</div></div>
           <div className="stat"><div className="ic"><Icon.Sparkle size={15}/></div><div><div className="num">Included</div>Career Coaching</div></div>
           <div className="stat"><div className="ic"><Icon.Map size={15}/></div><div><div className="num">3 States</div>AZ · CA · NV</div></div>
         </div>

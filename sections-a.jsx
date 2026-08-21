@@ -66,7 +66,7 @@ function HowSection() {
         <div className="section-head reveal">
           <div className="eyebrow">How It Works</div>
           <h2>Get Licensed in<br/><span className="gold">3 Simple Steps.</span></h2>
-          <p>No mystery. No 6-month commitment. Most students finish coursework and pass the state exam in under 60 days.</p>
+          <p>No mystery. No 6-month commitment. Coursework, state exam, and license application, in order.</p>
         </div>
 
         <div className="steps reveal">
@@ -94,9 +94,6 @@ function HowSection() {
             <div className="step-num">03</div>
             <h3>Pass Your Exam & Launch</h3>
             <p>Get exam prep, mock tests, and 1-on-1 coaching beyond the classroom. We help you choose a brokerage and land your first deal.</p>
-            <div className="style-pills">
-              <span className="style-pill" style={{cursor:'default', borderColor:'var(--gold)', color:'var(--gold)'}}>92% first-time pass rate</span>
-            </div>
           </div>
         </div>
 

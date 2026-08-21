@@ -79,17 +79,17 @@ const CE_DATA = {
     mode: "inhouse",
     tagline: "Stay Licensed.",
     accent: "Stay Sharp.",
-    intro: "Berkshire Hathaway HomeServices Nevada Properties provides all the continuing education courses you need to renew your license on your second and subsequent renewals. Classes are free to all BHHS Sales Executives using the current-year coupon code. See your manager for details.",
-    eligibility: "Most classes are taught live in the classroom, with select CE courses offered virtually over Zoom (links are emailed the afternoon before class). Six internet self-paced courses are also available.",
+    intro: "Berkshire Hathaway HomeServices Nevada Properties provides all the continuing education courses you need to renew your license on your second and subsequent renewals. Classes are open to agents at every brokerage; BHHS Sales Executives attend at no cost using the current-year coupon code. See your manager for details.",
+    eligibility: "Most classes are taught live in the classroom. Select courses are available via Zoom (links are emailed the afternoon before class). Six internet self-paced courses are also available.",
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=24&viewMode=list",
-    phone: "702-796-7777",
-    phoneHref: "tel:7027967777",
+    phone: "702-915-7755",
+    phoneHref: "tel:7029157755",
     email: "education@bhhsv2.com",
     quickfacts: [
-      { k: "Free", v: "With current-year BHHS coupon code" },
+      { k: "Open", v: "To agents at every brokerage" },
       { k: "3", v: "Las Vegas–area classrooms" },
       { k: "6", v: "Internet self-paced CE courses" },
-      { k: "Zoom", v: "Virtual class options available" },
+      { k: "Zoom", v: "Select courses available via Zoom" },
     ],
     renewalLinks: [
       { label: "Nevada Real Estate Division: Renewal Requirements", url: "https://red.nv.gov/Content/Licensing/Renewal_Requirements/" },
@@ -128,13 +128,6 @@ const CE_DATA = {
         hours: "3 hours",
         title: "Advanced Analysis of the Residential Purchase Agreement",
         desc: "An advanced contracts class that meets the contracts designation requirement. Improve your ability to explain contracts, identify required disclosures, and understand FIRPTA, multiple offers, and financing addendums.",
-      },
-      {
-        cat: "General",
-        code: "CE# 5179000.RE",
-        hours: "3 hours",
-        title: "Mortgage Finance in a New Age",
-        desc: "Identify the problems that prevent closings, understand mortgage disclosure information and good-faith estimates, settlement statements, pre-approval versus pre-qualification, and the loan programs available.",
       },
     ],
     locations: [
@@ -286,7 +279,7 @@ function CELocations() {
       <div className="container">
         <div className="section-head reveal">
           <div className="eyebrow">Classroom Locations</div>
-          <h2>Three campuses.<br/><span className="gold">Same free CE.</span></h2>
+          <h2>Three campuses.<br/><span className="gold">Same CE.</span></h2>
           <p>Live, in-person continuing education across the Las Vegas area. Pick the campus that fits your commute.</p>
         </div>
         <div className="centers-grid reveal">

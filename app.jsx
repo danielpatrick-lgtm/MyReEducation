@@ -70,7 +70,6 @@ function App() {
       <Footer/>
 
       {t.showStickyCTA && <StickyCTA/>}
-      {t.showChatBubble && <ChatBubble/>}
       <CareerQuiz/>
 
       <TweaksPanel title="Tweaks">
@@ -92,8 +91,6 @@ function App() {
         <TweakSection label="Conversion UI"/>
         <TweakToggle label="Sticky mobile CTA" value={t.showStickyCTA}
           onChange={(v) => setTweak('showStickyCTA', v)} />
-        <TweakToggle label="Live chat bubble" value={t.showChatBubble}
-          onChange={(v) => setTweak('showChatBubble', v)} />
       </TweaksPanel>
     </>
   );
