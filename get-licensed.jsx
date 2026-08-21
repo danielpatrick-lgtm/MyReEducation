@@ -82,11 +82,18 @@ const STATE_DATA = {
     intro: "In California, we've partnered with The CE Shop, an approved California Department of Real Estate (DRE) provider, to deliver all 135 required pre-licensing hours online and entirely self-paced.",
     phone: "877-373-4542",
     phoneHref: "tel:8773734542",
+    phoneLabel: "California DRE",
     email: "California@reschool.com",
     partner: "The CE Shop",
     selfPacedOnly: true,
     hideReimbursement: true,
-    hideFaqs: true,
+    faqs: [{ label: 'California Licensing FAQ', href: 'https://bhhsca.theceshop.com/california/pre-licensing/ca-real-estate-license-requirements-faq' }],
+    pacing: [
+      'No course may be finished in less than 2½ weeks.',
+      'Two courses may not be finished in less than 5 weeks.',
+      'Three courses may not be finished in less than 7½ weeks.',
+    ],
+    disclaimer: "Students are advised to visit dre.ca.gov for full license application requirements. Berkshire Hathaway HomeServices California Properties does not guarantee placement with any real estate company.",
     registerUrl: "https://bhhsca.theceshop.com/california/pre-licensing/ca-salesperson-pre-licensing-cost/",
     centers: [],
     quickfacts: [
@@ -226,7 +233,7 @@ function GLHero() {
         <div className="hero-ctas">
           <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
           <a className="btn btn-ghost" href="#courses"><Icon.Calendar size={15}/> View Courses</a>
-          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phone}</a>
+          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phoneLabel ? `${S.phoneLabel} · ${S.phone}` : S.phone}</a>
         </div>
 
         <div className="gl-quickfacts">
@@ -358,6 +365,14 @@ function Courses() {
             <div>
               <h4>Before you start</h4>
               <p className="course-note">{course.note}</p>
+              {S.pacing && (
+                <>
+                  <h4 style={{marginTop:26}}>DRE pacing rules</h4>
+                  <ul className="course-topics">
+                    {S.pacing.map((p, i) => <li key={i}><Icon.Check size={14}/> {p}</li>)}
+                  </ul>
+                </>
+              )}
               {!!course.docs.length && (
                 <div className="course-docs">
                   {course.docs.map((d, i) => (
@@ -373,7 +388,7 @@ function Courses() {
 
           <div className="course-detail-cta">
             <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
-            <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> Talk to an Advisor</a>
+            <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel || 'Talk to an Advisor'}</a>
           </div>
         </div>
       </div>
@@ -393,8 +408,11 @@ function Tuition() {
         </div>
         <div className="reveal" style={{display:'flex', gap:12, flexWrap:'wrap', justifyContent:'center'}}>
           <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> View Packages &amp; Pricing</a>
-          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phone}</a>
+          {S.faqs && S.faqs.map((f, i) => (
+            <a className="btn btn-line" href={f.href} target="_blank" rel="noopener noreferrer" key={i}><Icon.ArrowUR size={14}/> {f.label}</a>
+          ))}
         </div>
+        {S.disclaimer && <p className="reveal" style={{maxWidth:720, margin:'40px auto 0', textAlign:'center', fontSize:13, lineHeight:1.6, color:'var(--text-faint)'}}>{S.disclaimer}</p>}
       </div>
     </section>
   );
@@ -439,8 +457,7 @@ function Tuition() {
             <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> Academy FAQ</a>
             <a className="btn btn-line" href="#"><Icon.ArrowUR size={14}/> {S.name} Licensing FAQ</a>
           </div>
-        )}
-      </div>
+        )}      </div>
     </section>
   );
 }
@@ -538,7 +555,7 @@ function GLFinal() {
         </p>
         <div className="final-ctas">
           <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
-          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phone}</a>
+          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={15}/> {S.phoneLabel ? `${S.phoneLabel} · ${S.phone}` : S.phone}</a>
           <a className="btn btn-ghost" href={"mailto:" + S.email}><Icon.Send size={15}/> {S.email}</a>
         </div>
       </div>
