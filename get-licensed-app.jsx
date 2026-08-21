@@ -16,6 +16,7 @@ function GLApp() {
       <OtherStates/>
       <Centers/>
       <Courses/>
+      <StudentVoices/>
       <Tuition/>
       <Reimbursement/>
       <SelfPaced/>

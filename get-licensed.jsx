@@ -31,6 +31,23 @@ const STATE_DATA = {
       { label: 'AZ Academy FAQ',   href: 'https://myreeducation.com/arizona-real-estate-academy-faq/' },
       { label: 'AZ Licensing FAQ', href: 'https://azre.gov/licensees/original-licensing-information' },
     ],
+    testimonials: {
+      allUrl: 'https://arizonarealestateeducation.bhhsaz.com/testimonials',
+      items: [
+        {
+          quote: "The dedication, effort, and time that go into teaching are immense, and Christina brings an incredible amount of positive energy every single day. Her commitment is truly a gift\u2014one that many may not fully recognize or appreciate. She presents information in a way that is both engaging and easy to digest, making even complex topics more understandable. Anyone fortunate enough to learn from her will undoubtedly benefit from her expertise and enthusiasm.",
+          name: "Julian P", initials: "JP", date: "February 2025",
+        },
+        {
+          quote: "Christina was fantastic and I can\u2019t recommend taking her class enough! I came into the class expecting to struggle to stay focused and engaged during the nightly class Zoom calls from 5-10pm. Fortunately, Christina managed our 25 person remote class masterfully through a mix of class exercises, clear and concise explanations of detailed and sometimes mundane topics, and some well timed good humor. As a result, the classes moved quickly, kept my interest and led to me passing the test in my first attempt!",
+          name: "Jason", initials: "J", date: "February 2025",
+        },
+        {
+          quote: "Being completey new to the world of Real Estate Christina left me feeling really confident and excited in this new career path. I came into the class with zero knowledge and I am grateful to have had Cristina as the instructor. She was very energetic, knowledgeable, and expresses her passion in what has does. That is very contagious.",
+          name: "Adrian P", initials: "AP", date: "March 2025",
+        },
+      ],
+    },
     quickfacts: [
       { k: "90", suffix: "hr", v: "Live online over Zoom" },
       { k: "$499", v: "All-in tuition" },
@@ -708,6 +725,41 @@ function SchoolDisclosure() {
   );
 }
 
+function StudentVoices() {
+  const T = S.testimonials;
+  if (!T) return null;
+  return (
+    <section className="section" id="testimonials">
+      <div className="container">
+        <div className="section-head reveal">
+          <div className="eyebrow">Student Testimonials</div>
+          <h2>What our students<br/><span className="gold">have to say.</span></h2>
+        </div>
+        <div className="testimonials reveal">
+          {T.items.map((t, i) => (
+            <figure className="testimonial" key={i}>
+              <div className="testimonial-mark" aria-hidden="true">&ldquo;</div>
+              <blockquote className="testimonial-quote">{t.quote}</blockquote>
+              <figcaption className="testimonial-attr">
+                <div className="testimonial-av">{t.initials}</div>
+                <div>
+                  <div className="testimonial-name">{t.name}</div>
+                  <div className="testimonial-role">{S.name} Pre-Licensing Student · {t.date}</div>
+                </div>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        {T.allUrl && (
+          <div className="reveal" style={{display:'flex', justifyContent:'center', marginTop:36}}>
+            <a className="btn btn-line" href={T.allUrl} target="_blank" rel="noopener noreferrer"><Icon.ArrowUR size={14}/> Read All Testimonials</a>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+}
+
 window.GLHero = GLHero;
 window.OtherStates = OtherStates;
 window.Centers = Centers;
@@ -716,5 +768,6 @@ window.Tuition = Tuition;
 window.Reimbursement = Reimbursement;
 window.PostLicensing = PostLicensing;
 window.SchoolDisclosure = SchoolDisclosure;
+window.StudentVoices = StudentVoices;
 window.SelfPaced = SelfPaced;
 window.GLFinal = GLFinal;
