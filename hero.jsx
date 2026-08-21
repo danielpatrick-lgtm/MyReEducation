@@ -17,7 +17,7 @@ function Hero() {
               <span className="gold">Here.</span>
             </h1>
             <p className="hero-sub">
-              Get licensed with the modern real estate academy built for the next generation of agents. Flexible online + in-person classes, real career coaching, and a community that wins together, across Arizona, California, and Nevada.
+              Get licensed with the modern real estate academy built for the next generation of agents. Live instruction, real career coaching, and a community that wins together, across Arizona, California, and Nevada.
             </p>
             <div className="hero-ctas">
               <a className="btn btn-gold" href="#states">

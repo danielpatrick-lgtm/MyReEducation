@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myreeducation.com/sitemap.xml

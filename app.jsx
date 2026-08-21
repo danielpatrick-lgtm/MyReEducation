@@ -12,7 +12,7 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 const ACCENT_OPTIONS = ['#C7CBD1', '#DEE2E7', '#E26A2C', '#8FB8A5', '#9DB2D9'];
 const HERO_TONES = ['warm', 'cool', 'noir'];
-const FONT_OPTIONS = ['Montserrat', 'Playfair Display', 'Space Grotesk', 'DM Serif Display'];
+const FONT_OPTIONS = ['Montserrat', 'Playfair Display'];
 
 function App() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);

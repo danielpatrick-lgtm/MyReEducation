@@ -7,7 +7,7 @@ const STATES = [
     code: 'AZ',
     hours: '90',
     desc: 'Get your Arizona real estate license. Online and in-person classes taught by some of the best instructors in the state.',
-    href: 'Get Licensed Arizona.html',
+    href: '/get-licensed-arizona',
     accent: 'oklch(0.62 0.16 30)',  // warm sunset
     photo: 'assets/state-az.jpg',
   },
@@ -17,7 +17,7 @@ const STATES = [
     code: 'CA',
     hours: '135',
     desc: 'Get your California real estate license. Self-paced online classes available statewide, built around how you live.',
-    href: 'Get Licensed California.html',
+    href: '/get-licensed-california',
     accent: 'oklch(0.65 0.13 230)', // pacific blue
     photo: 'assets/state-ca.jpg',
   },
@@ -27,7 +27,7 @@ const STATES = [
     code: 'NV',
     hours: '120',
     desc: 'Get your Nevada real estate license. Day and night classes across three Las Vegas–area campuses, plus virtual cohorts.',
-    href: 'Get Licensed Nevada.html',
+    href: '/get-licensed-nevada',
     accent: 'oklch(0.7 0.13 95)',   // desert gold
     photo: 'assets/state-nv.jpg',
   },

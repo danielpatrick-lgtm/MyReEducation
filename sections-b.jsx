@@ -59,7 +59,7 @@ function LearningSection() {
     <section id="learning" className="section">
       <div className="container">
         <div className="section-head reveal">
-          <div className="eyebrow">Flexible Learning Options</div>
+          <div className="eyebrow">Learning Options</div>
           <h2>Learn Your Way.</h2>
           <p>Three modern learning tracks. Same curriculum, same state exam, same career outcome, built around the way you actually live.</p>
         </div>
@@ -195,7 +195,7 @@ function FinalCTA() {
           Start Your <span className="gold">New Career.</span>
         </h2>
         <p>
-          Flexible classes, modern coaching, and real support, designed to help you succeed in real estate. The next class starts soon.
+          Live classes, modern coaching, and real support, designed to help you succeed in real estate. The next class starts soon.
         </p>
         <div className="final-ctas">
           <a className="btn btn-gold" href="#states"><Icon.Rocket size={15}/> Enroll Now</a>
@@ -209,9 +209,9 @@ function FinalCTA() {
 
 // ─── FOOTER ─────────────────────────────────────────────────
 const FOOTER_CONTACT = {
-  arizona:    { phone: '480-344-4082', href: 'tel:4803444082', ce: 'Continuing Education Arizona.html' },
-  california: { phone: '877-373-4542', href: 'tel:8773734542', ce: 'Continuing Education California.html' },
-  nevada:     { phone: '702-915-7755', href: 'tel:7029157755', ce: 'Continuing Education Nevada.html' },
+  arizona:    { phone: '480-344-4082', href: 'tel:4803444082', ce: '/continuing-education-arizona' },
+  california: { phone: '877-373-4542', href: 'tel:8773734542', ce: '/continuing-education-california' },
+  nevada:     { phone: '702-915-7755', href: 'tel:7029157755', ce: '/continuing-education-nevada' },
 };
 
 function Footer() {
@@ -236,11 +236,11 @@ function Footer() {
           <div>
             <h4>Programs</h4>
             <ul>
-              <li><a href="Get Licensed Arizona.html">Get Licensed: Arizona</a></li>
-              <li><a href="Get Licensed California.html">Get Licensed: California</a></li>
-              <li><a href="Get Licensed Nevada.html">Get Licensed: Nevada</a></li>
+              <li><a href="/get-licensed-arizona">Get Licensed: Arizona</a></li>
+              <li><a href="/get-licensed-california">Get Licensed: California</a></li>
+              <li><a href="/get-licensed-nevada">Get Licensed: Nevada</a></li>
               <li><a href={contact.ce}>Continuing Education</a></li>
-              <li><a href="Property Management.html">Property Management</a></li>
+              <li><a href="/property-management">Property Management</a></li>
             </ul>
           </div>
           <div>

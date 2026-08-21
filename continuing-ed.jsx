@@ -152,7 +152,7 @@ function CEHero() {
       </div>
       <div className="container gl-hero-content">
         <div className="gl-crumbs">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
           <span style={{color:'var(--gold)'}}>Continuing Education</span>
           <span>/</span>
@@ -199,7 +199,7 @@ function CEOtherStates() {
           </div>
           <div className="other-states-links">
             {others.map(id => (
-              <a key={id} href={`Continuing Education ${CE_DATA[id].name}.html`} className="other-state-link">
+              <a key={id} href={`/continuing-education-${id}`} className="other-state-link">
                 <span className="other-state-code">{CE_DATA[id].code}</span>
                 <span className="other-state-name">{CE_DATA[id].name}</span>
                 <Icon.ArrowUR size={14}/>

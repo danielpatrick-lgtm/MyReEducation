@@ -23,7 +23,7 @@ function PMHero() {
       </div>
       <div className="container gl-hero-content">
         <div className="gl-crumbs">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
           <span style={{color:'var(--gold)'}}>Property Management</span>
         </div>

@@ -289,9 +289,9 @@ function GLHero() {
       </div>
       <div className="container gl-hero-content">
         <div className="gl-crumbs">
-          <a href="index.html">Home</a>
+          <a href="/">Home</a>
           <span>/</span>
-          <a href="index.html#states" style={{color:'var(--gold)'}}>Get Licensed</a>
+          <a href="/#states" style={{color:'var(--gold)'}}>Get Licensed</a>
           <span>/</span>
           <span style={{opacity:0.7}}>{S.name}</span>
         </div>
@@ -334,7 +334,7 @@ function OtherStates() {
           </div>
           <div className="other-states-links">
             {others.map(id => (
-              <a key={id} href={`Get Licensed ${STATE_DATA[id].name}.html`} className="other-state-link">
+              <a key={id} href={`/get-licensed-${id}`} className="other-state-link">
                 <span className="other-state-code">{STATE_DATA[id].code}</span>
                 <span className="other-state-name">{STATE_DATA[id].name}</span>
                 <Icon.ArrowUR size={14}/>

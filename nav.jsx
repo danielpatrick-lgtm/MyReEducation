@@ -31,7 +31,7 @@ function Nav() {
   // Detect whether we're on the home page so anchor links work both ways
   const onHome = typeof window !== 'undefined' &&
     /(?:index|Real Estate Academy)\.html$|^\/?$/.test(window.location.pathname);
-  const home = (hash) => onHome ? hash : "index.html" + hash;
+  const home = (hash) => onHome ? hash : "/" + hash;
 
   const close = () => { setMenuOpen(false); setCeMobileOpen(false); };
 
@@ -42,9 +42,9 @@ function Nav() {
   ];
 
   const ceLinks = [
-    { href: "Continuing Education Arizona.html",    label: "Arizona" },
-    { href: "Continuing Education California.html", label: "California" },
-    { href: "Continuing Education Nevada.html",     label: "Nevada" },
+    { href: "/continuing-education-arizona",    label: "Arizona" },
+    { href: "/continuing-education-california", label: "California" },
+    { href: "/continuing-education-nevada",     label: "Nevada" },
   ];
 
   // Desktop dropdown open/close with a small close delay so the cursor can
@@ -55,7 +55,7 @@ function Nav() {
   return (
     <nav className={"nav" + (scrolled ? " scrolled" : "")}>
       <div className="container nav-inner">
-        <a href="index.html" className="logo">
+        <a href="/" className="logo">
           <img src="assets/logo.png" alt="Real Estate Academy" className="logo-img"/>
         </a>
         <div className="nav-links">
@@ -85,7 +85,7 @@ function Nav() {
             </div>
           </div>
 
-          <a href="Property Management.html" className="nav-muted">Property Management</a>
+          <a href="/property-management" className="nav-muted">Property Management</a>
         </div>
         <a href={home("#states")} className="btn btn-gold nav-cta" style={{padding:'12px 20px'}}>
           <Icon.Rocket size={15}/> Get Licensed
@@ -128,7 +128,7 @@ function Nav() {
               ))}
             </div>
 
-            <a href="Property Management.html" onClick={close}>
+            <a href="/property-management" onClick={close}>
               <span>Property Management</span>
               <Icon.ArrowUR size={14}/>
             </a>

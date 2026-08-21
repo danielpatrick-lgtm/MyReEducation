@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/Get Licensed Arizona.html", "destination": "/get-licensed-arizona", "permanent": true },
+    { "source": "/Get Licensed California.html", "destination": "/get-licensed-california", "permanent": true },
+    { "source": "/Get Licensed Nevada.html", "destination": "/get-licensed-nevada", "permanent": true },
+    { "source": "/Continuing Education Arizona.html", "destination": "/continuing-education-arizona", "permanent": true },
+    { "source": "/Continuing Education California.html", "destination": "/continuing-education-california", "permanent": true },
+    { "source": "/Continuing Education Nevada.html", "destination": "/continuing-education-nevada", "permanent": true },
+    { "source": "/Property Management.html", "destination": "/property-management", "permanent": true }
+  ]
+}
