@@ -22,7 +22,7 @@ function WhySection() {
             <div className="why-card-content">
               <div className="num">01 / INCOME POTENTIAL</div>
               <h3>Build a career with unlimited earning potential.</h3>
-              <p>Top agents close $20M+ in volume yearly. Commissions scale with effort, not a fixed salary cap.</p>
+              <p>Commissions scale with effort, not a fixed salary cap. What you earn is a function of the work you put in.</p>
             </div>
           </div>
           <div className="why-card">
@@ -48,7 +48,7 @@ function WhySection() {
             <div className="why-card-content">
               <div className="num">03 / ENTREPRENEURIAL LIFESTYLE</div>
               <h3>Become your own brand. Build something for yourself.</h3>
-              <p>Every agent is a small business. We teach the marketing, systems, and mindset to scale yours from day one.</p>
+              <p>Every agent is a small business. Build your own brand, your own client base, and your own book of work.</p>
             </div>
           </div>
         </div>
@@ -66,7 +66,7 @@ function HowSection() {
         <div className="section-head reveal">
           <div className="eyebrow">How It Works</div>
           <h2>Get Licensed in<br/><span className="gold">3 Simple Steps.</span></h2>
-          <p>No mystery. No 6-month commitment. Coursework, state exam, and license application, in order.</p>
+          <p>No mystery. Coursework, state exam, and license application, in order.</p>
         </div>
 
         <div className="steps reveal">
@@ -85,15 +85,15 @@ function HowSection() {
           <div className="step">
             <div className="step-num">02</div>
             <h3>Complete Your Coursework</h3>
-            <p>Learn from licensed in-state instructors and active industry professionals. Track your progress in a clean dashboard built for working adults.</p>
+            <p>Learn from licensed in-state instructors and active industry professionals, in the classroom, live online, or at your own pace.</p>
             <div className="style-pills">
-              <span className="style-pill" style={{cursor:'default'}}>90 hours pre-license</span>
+              <span className="style-pill" style={{cursor:'default'}}>AZ 90 hr · NV 120 hr · CA 135 hr</span>
             </div>
           </div>
           <div className="step">
             <div className="step-num">03</div>
             <h3>Pass Your Exam & Launch</h3>
-            <p>Get exam prep, mock tests, and 1-on-1 coaching beyond the classroom. We help you choose a brokerage and land your first deal.</p>
+            <p>Practice exams and instructor review prepare you for the state test. Pass it, submit your license application, and start your career.</p>
           </div>
         </div>
 
@@ -154,7 +154,7 @@ function StoriesSection() {
           <div>
             <div className="eyebrow" style={{marginBottom: 12}}>Career Match Quiz</div>
             <h3>What type of real estate career fits you?</h3>
-            <p>5 questions, 90 seconds. We'll match you with a learning track and a coach.</p>
+            <p>5 questions, 90 seconds. We'll point you toward the learning track that fits.</p>
           </div>
           <button
             className="btn btn-gold"

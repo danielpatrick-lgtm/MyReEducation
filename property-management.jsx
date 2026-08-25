@@ -2,15 +2,16 @@
 // Visual language matches Get Licensed Nevada.html
 
 const ENROLLMENT_URL = "https://drive.google.com/file/d/1VL2iuEb0pocWtSBjjHgZnXFaY1isJZuC/view?pli=1";
-const REGISTER_URL = "#register"; // user said: new link TBD, leave as-is
+const REGISTER_URL = "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=25&viewMode=list";
+const registerProps = { href: REGISTER_URL, target: "_blank", rel: "noopener noreferrer" };
 
 const PM = {
   hours: "24",
   tuition: "$275",
   adminFee: "$25",
   total: "$300.00",
-  phone: "702-796-7777",
-  phoneHref: "tel:7027967777",
+  phone: "702-915-7755",
+  phoneHref: "tel:7029157755",
   email: "RESchool@bhhsnv.com",
 };
 
@@ -45,7 +46,7 @@ function PMHero() {
         </div>
 
         <div className="hero-ctas" style={{marginTop:36}}>
-          <a className="btn btn-gold" href={REGISTER_URL}><Icon.Rocket size={15}/> Register for Class</a>
+          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> Register for Class</a>
           <a className="btn btn-ghost" href={ENROLLMENT_URL} target="_blank" rel="noopener noreferrer">
             <Icon.ArrowUR size={15}/> Enrollment Agreement
           </a>
@@ -126,7 +127,7 @@ function PMOverview() {
           </div>
 
           <div className="course-detail-cta">
-            <a className="btn btn-gold" href={REGISTER_URL}><Icon.Rocket size={14}/> Register for Class</a>
+            <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={14}/> Register for Class</a>
             <a className="btn btn-ghost" href={PM.phoneHref}><Icon.Phone size={14}/> {PM.phone}</a>
           </div>
         </div>
@@ -162,7 +163,7 @@ function PMTuition() {
               <span>Total Fees</span>
               <span className="tuition-total-num">{PM.total}</span>
             </div>
-            <a className="btn btn-gold" href={REGISTER_URL} style={{width:'100%', justifyContent:'center'}}>
+            <a className="btn btn-gold" {...registerProps} style={{width:'100%', justifyContent:'center'}}>
               <Icon.Rocket size={14}/> Register
             </a>
           </div>
@@ -205,7 +206,7 @@ function PMFinal() {
           Complete your 24 hours live in the classroom or via Zoom. Course materials shipped on receipt of your signed Enrollment Agreement.
         </p>
         <div className="final-ctas">
-          <a className="btn btn-gold" href={REGISTER_URL}><Icon.Rocket size={15}/> Register for Class</a>
+          <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> Register for Class</a>
           <a className="btn btn-ghost" href={ENROLLMENT_URL} target="_blank" rel="noopener noreferrer">
             <Icon.ArrowUR size={15}/> Enrollment Agreement
           </a>

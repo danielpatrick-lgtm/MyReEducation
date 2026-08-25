@@ -6,7 +6,7 @@ const STATES = [
     name: 'Arizona',
     code: 'AZ',
     hours: '90',
-    desc: 'Get your Arizona real estate license. Online and in-person classes taught by some of the best instructors in the state.',
+    desc: 'Get your Arizona real estate license. In-person classes in Scottsdale, plus live remote and self-paced online options.',
     href: '/get-licensed-arizona',
     accent: 'oklch(0.62 0.16 30)',  // warm sunset
     photo: 'assets/state-az.jpg',
@@ -26,7 +26,7 @@ const STATES = [
     name: 'Nevada',
     code: 'NV',
     hours: '120',
-    desc: 'Get your Nevada real estate license. Day and night classes across three Las Vegas–area campuses, plus virtual cohorts.',
+    desc: 'Get your Nevada real estate license. Day and evening classes at our Henderson and West Sunset campuses in the Las Vegas area.',
     href: '/get-licensed-nevada',
     accent: 'oklch(0.7 0.13 95)',   // desert gold
     photo: 'assets/state-nv.jpg',

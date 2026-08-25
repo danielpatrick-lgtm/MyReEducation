@@ -53,30 +53,30 @@ const ARCHETYPES = {
   closer: {
     name: "The Closer",
     accent: "Volume.",
-    blurb: "You're built for momentum: high transaction count, fast follow-up, and the discipline to keep your pipeline full. Most Closers hit six figures inside their first 18 months.",
-    track: "Online + In-Person Hybrid",
-    why: "Maximum class density, role-play practice, and weekly cold-call coaching.",
+    blurb: "You're built for momentum: high transaction count, fast follow-up, and the discipline to keep your pipeline full.",
+    track: "Online + In Person",
+    why: "A mix of classroom and online coursework so you can move through your hours quickly.",
   },
   luxury: {
     name: "The Luxury Specialist",
     accent: "Presence.",
     blurb: "You think in brand, taste, and long-term relationships. Luxury Specialists win fewer, bigger deals, and become the agent a generation of clients refer to.",
-    track: "In-Person Experience",
-    why: "Networking-first cohorts, branding workshops, and brokerage introductions in Vegas + Reno.",
+    track: "In Person",
+    why: "Classroom instruction, where you meet instructors and classmates face to face.",
   },
   investor: {
     name: "The Investor's Agent",
     accent: "Numbers.",
     blurb: "You see deals before they exist: cap rates, ARV, comps, and creative financing. You'll work with flippers, landlords, and multifamily operators across the Southwest's fastest-growing markets.",
-    track: "Virtual Cohort",
-    why: "Live deal-analysis labs, state-specific landlord-law modules, and direct mentorship from active investor-agents.",
+    track: "Live Remote",
+    why: "Live remote instruction, with state-specific law and contracts covered in class.",
   },
   builder: {
     name: "The Team Builder",
     accent: "Leverage.",
     blurb: "You don't just want to close. You want to scale. Team Builders open teams, recruit agents, and eventually own brokerages. Your edge is systems, mentorship, and patience.",
-    track: "In-Person + Coaching Series",
-    why: "Operator-track curriculum, leadership coaching, and a fast-pass to the Rick Berube Coaching Series.",
+    track: "In Person",
+    why: "Classroom instruction, with instructors who are active industry professionals.",
   },
 };
 
@@ -174,7 +174,7 @@ function CareerQuiz() {
       if (!res.ok) throw new Error('Bad response');
       setSent(true);
     } catch (err) {
-      setSendError('Something went wrong — please try again, or email us directly.');
+      setSendError('We could not send that. Please call 702-915-7755 or email RESchool@bhhsnv.com and we will help you directly.');
     } finally {
       setSending(false);
     }

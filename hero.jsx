@@ -17,13 +17,13 @@ function Hero() {
               <span className="gold">Here.</span>
             </h1>
             <p className="hero-sub">
-              Get licensed with the modern real estate academy built for the next generation of agents. Live instruction, real career coaching, and a community that wins together, across Arizona, California, and Nevada.
+              Get licensed with the modern real estate academy built for the next generation of agents. Live instruction, licensed in-state instructors, and self-paced options across Arizona, California, and Nevada.
             </p>
             <div className="hero-ctas">
               <a className="btn btn-gold" href="#states">
                 <Icon.Rocket size={15}/> Get Licensed
               </a>
-              <a className="btn btn-ghost" href="#">
+              <a className="btn btn-ghost" href="#states">
                 <Icon.Calendar size={15}/> View Upcoming Classes
               </a>
             </div>
@@ -49,8 +49,8 @@ function Hero() {
       <div className="hero-stats">
         <div className="container">
           <div className="stat"><div className="ic"><Icon.Users size={15}/></div><div><div className="num">Live</div>Instructor-Led Classes</div></div>
-          <div className="stat"><div className="ic"><Icon.Online size={15}/></div><div><div className="num">Zoom</div>Available in Arizona</div></div>
-          <div className="stat"><div className="ic"><Icon.Sparkle size={15}/></div><div><div className="num">Included</div>Career Coaching</div></div>
+          <div className="stat"><div className="ic"><Icon.Online size={15}/></div><div><div className="num">Live</div>Remote Option in Arizona</div></div>
+          <div className="stat"><div className="ic"><Icon.Sparkle size={15}/></div><div><div className="num">Approved</div>State-Licensed Schools</div></div>
           <div className="stat"><div className="ic"><Icon.Map size={15}/></div><div><div className="num">3 States</div>AZ · CA · NV</div></div>
         </div>
       </div>

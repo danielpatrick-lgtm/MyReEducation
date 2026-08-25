@@ -195,11 +195,11 @@ function FinalCTA() {
           Start Your <span className="gold">New Career.</span>
         </h2>
         <p>
-          Live classes, modern coaching, and real support, designed to help you succeed in real estate. The next class starts soon.
+          Live classes, licensed in-state instructors, and self-paced options. Choose your state to see the current schedule.
         </p>
         <div className="final-ctas">
           <a className="btn btn-gold" href="#states"><Icon.Rocket size={15}/> Enroll Now</a>
-          <a className="btn btn-ghost" href="#states"><Icon.Calendar size={15}/> Upcoming Classes</a>
+          <a className="btn btn-ghost" href="#states"><Icon.Calendar size={15}/> View by State</a>
           <a className="btn btn-ghost" href="tel:7029157755"><Icon.Phone size={15}/> 702-915-7755</a>
         </div>
       </div>
@@ -230,7 +230,7 @@ function Footer() {
               <img src="assets/logo.png" alt="Real Estate Academy" className="logo-img"/>
             </div>
             <p style={{color:'var(--text-dim)', fontSize:14, lineHeight:1.55, maxWidth:340, margin:0}}>
-              The modern real estate academy. Get licensed, get coached, get launched, built for the next generation of agents across Arizona, California, and Nevada.
+              The modern real estate academy. Pre-licensing and continuing education for the next generation of agents across Arizona, California, and Nevada.
             </p>
           </div>
           <div>
@@ -294,7 +294,7 @@ function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <div>© 2026 Real Estate Academy · Licensed in Arizona · California · Nevada</div>
+          <div>© 2026 Real Estate Academy · Arizona · California · Nevada</div>
         </div>
       </div>
     </footer>
