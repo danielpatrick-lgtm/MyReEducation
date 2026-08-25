@@ -284,13 +284,6 @@ function Footer() {
               <Icon.ArrowUR size={11}/>
             </a>
           </div>
-          <div className="footer-dmca" aria-label="DMCA Protected">
-            <span className="footer-dmca-mark">©</span>
-            <span className="footer-dmca-text">
-              <strong>DMCA</strong>
-              <small>Protected</small>
-            </span>
-          </div>
         </div>
 
         <div className="footer-bottom">
