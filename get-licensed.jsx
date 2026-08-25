@@ -165,9 +165,25 @@ const STATE_DATA = {
     hideReimbursement: true,
     grouponUrl: "https://www.groupon.com/deals/berkshire-hathaway-home-services-nevada-properties-1",
     postLicensing: {
-      eyebrow: "Post-Licensing",
-      title: ["Newly licensed?", "Your next class."],
-      blurb: "Nevada post-licensing education is taught live and in person at Nevada Real Estate Academy. Check the calendar for upcoming dates, times, and registration.",
+      eyebrow: "Post-Licensing · First-Year Licensees",
+      title: ["Newly licensed?", "30 hours, 10 sessions."],
+      blurb: "Berkshire Hathaway HomeServices Nevada Properties is proud to offer a 30 hour Post-Licensing course approved by the Nevada Real Estate Division that meets the educational requirements of NAC 645.4442 for first year licensees. This course consists of 10 Sessions and includes a review at the end of each Session.",
+      code: "30 HR",
+      badge: "Modules A – O · Live and In Person",
+      requirement: "You must have your License Number assigned from the Real Estate Division to get the required credit for these courses.",
+      notCE: "First year licensees only. This course is not Continuing Education (CE).",
+      sessions: [
+        { n: 'Session 1',  mod: 'Module E',        title: 'Professional Conduct, Etiquette and Ethics' },
+        { n: 'Session 2',  mod: 'Module H',        title: 'Agency Relationships' },
+        { n: 'Session 3',  mod: 'Module A',        title: 'Real Estate Contracts' },
+        { n: 'Session 4',  mod: 'Module B',        title: 'The Listing Process' },
+        { n: 'Session 5',  mod: 'Module D',        title: 'Buyer Representation' },
+        { n: 'Session 6',  mod: 'Modules N & G',   title: 'Negotiating and Cost of Sale' },
+        { n: 'Session 7',  mod: 'Modules L & M',   title: 'Escrow / Closing and Financing' },
+        { n: 'Session 8',  mod: 'Modules J & F',   title: 'Regulatory Disclosures and Advertising' },
+        { n: 'Session 9',  mod: 'Module C',        title: 'Business Plan & Goals' },
+        { n: 'Session 10', mod: 'Modules I, K & O', title: 'Land, Property Management & Tax Opportunities – Liabilities' },
+      ],
       url: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=28&drop_in=0&viewMode=list",
     },
     selfPacedCopy: {
@@ -678,11 +694,32 @@ function PostLicensing() {
         <div className="section-head reveal">
           <div className="eyebrow">{P.eyebrow}</div>
           <h2>{P.title[0]}<br/><span className="gold">{P.title[1]}</span></h2>
-          <p>{P.blurb}</p>
         </div>
-        <div className="reveal" style={{display:'flex', gap:12, flexWrap:'wrap', justifyContent:'center'}}>
-          <a className="btn btn-gold" href={P.url} target="_blank" rel="noopener noreferrer"><Icon.Calendar size={14}/> View Post-Licensing Calendar</a>
-          <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel} · {S.phone}</a>
+        <div className="course-detail reveal">
+          <div className="course-detail-head">
+            <div>
+              {P.badge && <div className="course-detail-badge">{P.badge}</div>}
+              <h3>Nevada Post-Licensing</h3>
+              {P.notCE && <div className="course-detail-hours">{P.notCE}</div>}
+            </div>
+            {P.code && <div className="course-detail-code">{P.code}</div>}
+          </div>
+          <p className="course-detail-desc">{P.blurb}</p>
+          {P.sessions && (
+            <ol className="pl-sessions">
+              {P.sessions.map(s => (
+                <li key={s.n}>
+                  <span className="pl-sess-n">{s.n}</span>
+                  <span className="pl-sess-body"><strong>{s.title}</strong><em>{s.mod}</em></span>
+                </li>
+              ))}
+            </ol>
+          )}
+          {P.requirement && <p className="course-note">{P.requirement}</p>}
+          <div className="course-detail-cta">
+            <a className="btn btn-gold" href={P.url} target="_blank" rel="noopener noreferrer"><Icon.Calendar size={14}/> View Dates & Register</a>
+            <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel} · {S.phone}</a>
+          </div>
         </div>
       </div>
     </section>

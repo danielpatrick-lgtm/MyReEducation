@@ -402,7 +402,7 @@
 
 .course-video{display:grid;grid-template-columns:minmax(0,0.85fr) minmax(0,1.15fr);gap:40px;align-items:center;margin-top:56px;padding:34px;border-radius:18px;background:rgba(255,255,255,0.025);border:1px solid rgba(199,203,209,0.16)}
 .course-video-side h3{font-size:30px;line-height:1.15;margin:14px 0 12px;letter-spacing:-0.02em}
-.course-video-side p{font-size:15px;line-height:1.65;color:var(--text-soft);max-width:38ch}
+.course-video-side p{font-size:15px;line-height:1.65;color:var(--text-dim);max-width:38ch}
 .course-video-player{width:100%;aspect-ratio:16/9;border-radius:12px;background:#000;border:1px solid rgba(199,203,209,0.22);display:block}
 @media(max-width:900px){.course-video{grid-template-columns:1fr;gap:26px;padding:24px}}
 
@@ -873,3 +873,12 @@
 .policy-list a:hover{color:var(--gold);border-bottom-color:var(--gold)}
 .policy-back{padding-top:12px}
 @media (max-width:720px){.policy-hero{padding:120px 0 44px}}
+
+/* ─── POST-LICENSING SESSIONS ────────────────────────────── */
+.pl-sessions{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;counter-reset:pl}
+.pl-sessions li{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.pl-sess-n{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);white-space:nowrap;min-width:74px}
+.pl-sess-body{display:flex;flex-direction:column;gap:3px}
+.pl-sess-body strong{font-weight:500;font-size:15px;line-height:1.4;color:var(--warm-white)}
+.pl-sess-body em{font-style:normal;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:var(--text-dim)}
+@media(max-width:820px){.pl-sessions{grid-template-columns:1fr;gap:0}}
