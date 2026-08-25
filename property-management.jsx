@@ -2,7 +2,7 @@
 // Visual language matches Get Licensed Nevada.html
 
 const ENROLLMENT_URL = "https://drive.google.com/file/d/1VL2iuEb0pocWtSBjjHgZnXFaY1isJZuC/view?pli=1";
-const REGISTER_URL = "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_keyword=property%20management&viewMode=list";
+const REGISTER_URL = "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&viewMode=list";
 const registerProps = { href: REGISTER_URL, target: "_blank", rel: "noopener noreferrer" };
 
 const PM = {
