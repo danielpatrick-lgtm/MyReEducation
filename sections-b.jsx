@@ -61,35 +61,35 @@ function LearningSection() {
         <div className="section-head reveal">
           <div className="eyebrow">Learning Options</div>
           <h2>Learn Your Way.</h2>
-          <p>Three modern learning tracks. Same curriculum, same state exam, same career outcome, built around the way you actually live.</p>
+          <p>Three ways to complete your pre-licensing hours. Same curriculum, same state exam, same career outcome.</p>
         </div>
 
         <div className="glass-grid reveal">
           <div className="glass">
             <div className="ic"><Icon.Online size={22}/></div>
-            <h3>Online Classes</h3>
-            <p>Self-paced flexibility from anywhere. Mobile-first lessons, mock exams, and progress tracking. Finish in as little as 4 weeks.</p>
+            <h3>Self-Paced Online</h3>
+            <p>Complete your required hours on your own schedule through our online education partner, The CE Shop. Available in Arizona, California, and Nevada.</p>
             <div className="meta">
-              <span>4 TO 12 WEEKS</span>
-              <span className="badge">Most Popular</span>
+              <span>SELF-PACED</span>
+              <span className="badge">Enroll any time</span>
             </div>
           </div>
           <div className="glass">
             <div className="ic"><Icon.Virtual size={22}/></div>
-            <h3>Virtual Learning</h3>
-            <p>Live online instruction with real interaction. Weekly cohort sessions, instructor Q&A, and a Slack-style community channel.</p>
+            <h3>Live Remote</h3>
+            <p>Attend the same instructor-led classes online. Students join on camera for the full session from a computer or tablet, per state requirements.</p>
             <div className="meta">
-              <span>8 WEEKS · COHORT</span>
-              <span className="badge">Live · Tue / Thu</span>
+              <span>INSTRUCTOR-LED</span>
+              <span className="badge">Live online</span>
             </div>
           </div>
           <div className="glass">
             <div className="ic"><Icon.Inperson size={22}/></div>
-            <h3>In-Person Experience</h3>
-            <p>Hands-on learning and networking. Las Vegas and Reno campuses, role-play sessions, brokerage tours, and a built-in alumni network.</p>
+            <h3>In Person</h3>
+            <p>Classroom instruction at our campuses in Scottsdale, Henderson, and Las Vegas. Seating is limited, so early enrollment is recommended.</p>
             <div className="meta">
-              <span>LAS VEGAS · RENO</span>
-              <span className="badge">Next: Jun 14</span>
+              <span>AZ · NV CAMPUSES</span>
+              <span className="badge">Enrolling now</span>
             </div>
           </div>
         </div>
