@@ -2,7 +2,7 @@
 // Visual language matches Get Licensed Nevada.html
 
 const ENROLLMENT_URL = "https://drive.google.com/file/d/1VL2iuEb0pocWtSBjjHgZnXFaY1isJZuC/view?pli=1";
-const REGISTER_URL = "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=25&viewMode=list";
+const REGISTER_URL = "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_keyword=property%20management&viewMode=list";
 const registerProps = { href: REGISTER_URL, target: "_blank", rel: "noopener noreferrer" };
 
 const PM = {
@@ -165,6 +165,9 @@ function PMTuition() {
             </div>
             <a className="btn btn-gold" {...registerProps} style={{width:'100%', justifyContent:'center'}}>
               <Icon.Rocket size={14}/> Register
+            </a>
+            <a className="btn btn-ghost" href="/property-management-faq" style={{width:'100%', justifyContent:'center', marginTop:10}}>
+              <Icon.Arrow size={14}/> Property Management FAQ
             </a>
           </div>
 
