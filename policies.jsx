@@ -103,6 +103,101 @@ const POLICY_DATA = {
       admins: ['Forrest Barbee', 'Christina Rogowski', 'Mary Sand'],
     },
   },
+  nevada: {
+    name: 'Nevada',
+    school: 'Nevada Real Estate Academy',
+    schoolNo: null,
+    accred: 'Licensed to operate by the Commission on Postsecondary Education. Approved by the Nevada Real Estate Division.',
+    backHref: '/get-licensed-nevada',
+    backLabel: 'Get Licensed: Nevada',
+    intro: 'Policies and procedures for the Nevada pre-licensing program at Nevada Real Estate Academy.',
+    groups: [
+      {
+        title: 'Classes',
+        items: [
+          {
+            q: 'Where are the classes held?',
+            a: ['Our classes are held at one of our 2 classroom locations. Courses alternate times and locations and are subject to change without notice.'],
+            list: ['Corporate Training Classroom \u2014 3185 St. Rose Parkway Suite #100, Henderson, Nevada 89052. 702-796-7777. The Henderson classroom consists of 14,527 sq. ft. of classroom and administrative areas and has a maximum classroom capacity of 50 pre-licensing students.',
+                   'SW Training Classroom \u2014 8850 West Sunset Road Suite #200, Las Vegas, Nevada 89148. 702-734-5555.'],
+          },
+          {
+            q: 'What times are the classes instructed?',
+            a: ['Pre Licensing courses are held Monday thru Friday. The Day class runs from 9 am to 3 pm for 4 Weeks and the Evening class runs from 5:00 pm to 10:00 pm for 4 Weeks. Courses begin on the first Monday of the month with the exception of a Monday holiday in which the course will begin on Tuesday.'],
+          },
+          {
+            q: 'Who teaches the courses?',
+            a: ['Laurette Mormon is our Director of Education and the Academy has 4 instructors who teach the courses.'],
+          },
+          {
+            q: 'Will a certificate be issued?',
+            a: ['Upon successfully completion of the course and passing the three comprehensive final exams with a score of at least 75% or higher you will be issued two certificates of completion.'],
+          },
+        ],
+      },
+      {
+        title: 'Enrollment and Textbooks',
+        items: [
+          {
+            q: 'Are textbooks included?',
+            a: ['You will be supplied a textbook for all courses that require one. The fees for the material are included in your total fees. Refund for texts will be granted provided that the texts are returned unused and undamaged no later than the first day of class. There shall be no refund for texts for home study correspondence students (see refund policy, below).'],
+          },
+          {
+            q: 'What documents do I need to submit?',
+            a: ['One of the Enrollment documents and the Course Catalog with all receipts indicating proof of tuition/book payment must be emailed to RESchool@bhhsnv.com, including any discount coupons. Upon receipt of these documents, you will receive an email with instructions to pick up Course books.'],
+          },
+        ],
+      },
+      {
+        title: 'Refund Policy',
+        items: [
+          {
+            q: 'Cancellation before instruction begins',
+            a: [],
+            list: ['If a student cancels enrollment within three (3) days after signing the Enrollment Agreement, student will receive a refund of 100% of the tuition fees.',
+                   'If the student cancels enrollment prior to the start of instruction, and three days after signing the Enrollment Agreement, there will be a refund of the tuition fees, less a registration fee of 10% of the tuition amount.',
+                   'If textbook(s) have been dispensed, opened and used, student will receive a refund of Tuition fee less $100.00 to cover the cost of the textbook and processing fee.'],
+          },
+          {
+            q: 'Cancellation after instruction begins',
+            a: ['After the start of the instruction, and before 60% of the course has been completed, which is the 12th session for the 120 Hour Day or Evening Student, 16th Session for the 18 Hour Day or Evening Student; the school has received a refund request in writing from the student/guardian, a refund will be made less: 1.) 10% of the tuition as a registration fee and 2.) a pro rated amount of the tuition determined by the first day of instruction to the last day of attendance by the student.',
+                'No refund of tuition will be granted after 60% completion of the program. Refund for texts will be granted provided that the texts are returned unused and undamaged no later than the first day of class. If the Academy cancels the selected course, there will be a full refund to the student.'],
+          },
+          {
+            q: 'How refunds are issued',
+            a: ['Nevada Real Estate Academy will issue all refunds within 15 calendar days upon receipt of the written cancellation request. All written refund requests can be sent to RESchool@bhhsnv.com.',
+                'Refunds are only applicable to those students who pay the full tuition amount for the course and will not apply to any discounted tuition program.'],
+          },
+        ],
+      },
+      {
+        title: 'Student Grievance Policy',
+        items: [
+          {
+            q: 'How do I file a complaint?',
+            a: ['Students enrolled in a licensed, private postsecondary educational institution have the right to register a legitimate complaint with the Commission on Postsecondary Education. Prior to filing a complaint, you must attempt to resolve the issue with the school.'],
+          },
+        ],
+      },
+      {
+        title: 'Tuition Reimbursement',
+        items: [
+          {
+            q: 'Is tuition reimbursement available?',
+            a: ['Berkshire Hathaway HomeServices Nevada Properties does offer a pre-licensing tuition reimbursement program for full price students that affiliate with one of the three branches upon successfully completing the course and passing the Pearson Vue state exam. The BHHSNV branches offer continuous sales training programs for newly licensed affiliates.',
+                'Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties, however you are free to affiliate with any Broker or Developer of your choice. Reimbursement program is not available at any other Broker or Developer and does not apply to any discounted tuition.'],
+          },
+        ],
+      },
+    ],
+    contact: {
+      phones: [{ label: 'Corporate Training Classroom (Henderson)', number: '702-796-7777', href: 'tel:7027967777' },
+               { label: 'SW Training Classroom (Las Vegas)', number: '702-734-5555', href: 'tel:7027345555' }],
+      email: 'RESchool@bhhsnv.com',
+      address: '3185 St. Rose Parkway Suite #100, Henderson, NV 89052',
+      admins: ['Laurette Mormon, Director of Education'],
+    },
+  },
 };
 
 const P = POLICY_DATA[window.POLICY_STATE || 'arizona'];
@@ -125,7 +220,7 @@ function PolicyPage() {
             <span>/</span>
             <span style={{color:'var(--gold)'}}>School Policies</span>
           </div>
-          <div className="eyebrow">{P.school} &middot; School No. {P.schoolNo}</div>
+          <div className="eyebrow">{P.school}{P.schoolNo ? ' \u00b7 School No. ' + P.schoolNo : ''}</div>
           <h1>{P.name} School<br/><span className="gold">Policies &amp; Procedures</span></h1>
           <p>{P.intro}</p>
         </div>

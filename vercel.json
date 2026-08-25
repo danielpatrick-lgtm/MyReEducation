@@ -19,8 +19,8 @@
     { "source": "/get-licensed-ca", "destination": "/get-licensed-california", "permanent": true },
     { "source": "/get-licensed-nv", "destination": "/get-licensed-nevada", "permanent": true },
     { "source": "/arizona-real-estate-academy-faq", "destination": "/arizona-school-policies", "permanent": true },
-    { "source": "/nevada-real-estate-academy-faq", "destination": "/get-licensed-nevada", "permanent": true },
-    { "source": "/nevada-real-estate-academy-licensing-faq-nv", "destination": "/get-licensed-nevada", "permanent": true },
+    { "source": "/nevada-real-estate-academy-faq", "destination": "/nevada-school-policies", "permanent": true },
+    { "source": "/nevada-real-estate-academy-licensing-faq-nv", "destination": "/nevada-school-policies", "permanent": true },
     { "source": "/prop-management-faq", "destination": "/property-management", "permanent": true },
     { "source": "/property-management-faq", "destination": "/property-management", "permanent": true }
   ]

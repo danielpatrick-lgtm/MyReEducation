@@ -177,8 +177,8 @@ const STATE_DATA = {
     },
     selfPacedUrl: "http://www.theceshop.com/",
     faqs: [
+      { label: 'School Policies \u0026 Procedures', href: '/nevada-school-policies' },
       { label: 'NV Real Estate Division', href: 'https://red.nv.gov/Licensing/Real_Estate/' },
-      { label: 'NV Licensing Requirements', href: 'https://red.nv.gov/uploadedFiles/rednvgov/content/Licensing/Real_Estate/RE_License_Requirements.pdf' },
     ],
     quickfacts: [
       { k: "120", suffix: "hr", v: "Pre-licensing course" },
