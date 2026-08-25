@@ -858,6 +858,7 @@
 /* ─── SCHOOL POLICIES PAGE ──────────────────────────────── */
 .policy-hero{padding:150px 0 56px;border-bottom:1px solid rgba(255,255,255,0.07);background:linear-gradient(180deg,#111112 0%,var(--bg-black) 100%)}
 .policy-hero h1{font-family:'Montserrat',sans-serif;font-size:clamp(34px,5vw,58px);font-weight:800;line-height:1.04;letter-spacing:-0.03em;margin:16px 0 0}
+.policy-hero h1 .gold{color:var(--gold);font-style:italic;font-weight:500;font-family:'Playfair Display',Georgia,serif}
 .policy-hero p{color:var(--text-dim);font-size:17px;line-height:1.55;margin:20px 0 0;max-width:620px;text-wrap:pretty}
 .policy-body{max-width:820px}
 .policy-group{margin-bottom:56px}

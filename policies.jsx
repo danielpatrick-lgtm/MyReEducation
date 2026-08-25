@@ -3,6 +3,9 @@
 const POLICY_DATA = {
   arizona: {
     name: 'Arizona',
+    heading: 'Arizona School',
+    accent: 'Policies \u0026 Procedures',
+    crumb: 'School Policies',
     school: 'Arizona Real Estate Education',
     schoolNo: 'S19-0001',
     backHref: '/get-licensed-arizona',
@@ -105,6 +108,9 @@ const POLICY_DATA = {
   },
   nevada: {
     name: 'Nevada',
+    heading: 'Nevada School',
+    accent: 'Policies \u0026 Procedures',
+    crumb: 'School Policies',
     school: 'Nevada Real Estate Academy',
     schoolNo: null,
     accred: 'Licensed to operate by the Commission on Postsecondary Education. Approved by the Nevada Real Estate Division.',
@@ -198,6 +204,73 @@ const POLICY_DATA = {
       admins: ['Laurette Mormon, Director of Education'],
     },
   },
+  propertymanagement: {
+    name: 'Property Management',
+    heading: 'Property Management',
+    accent: 'Questions \u0026 Answers',
+    crumb: 'FAQ',
+    school: 'Nevada Real Estate Academy',
+    schoolNo: null,
+    backHref: '/property-management',
+    backLabel: 'Property Management',
+    intro: 'Common questions about the 24-hour Nevada Property Management Pre-Permit Course.',
+    groups: [
+      {
+        title: 'Registration',
+        items: [
+          {
+            q: 'How do I register for this course?',
+            a: ['Please feel free to browse our Education calendar and go to Property Management to register for this course. For questions you can contact Laurette Mormon, Director of Education at LauretteM@bhhsnv.com.'],
+          },
+        ],
+      },
+      {
+        title: 'Permit Requirements',
+        items: [
+          {
+            q: 'What is required by the Real Estate Division to obtain a Nevada Property Management Permit?',
+            a: ['All applicants must:'],
+            list: ['Hold a Valid/Active Nevada Real Estate License',
+                   'Show proof of attending an accredited 24-hour Property Management pre-permit course',
+                   'Show proof of passing the Nevada Property Management state examination within 1 year of date of application'],
+          },
+        ],
+      },
+      {
+        title: 'The Course',
+        items: [
+          {
+            q: 'What does the course cover?',
+            a: ['This course will satisfy the entire requirement of 24 hours of instruction in required property management subjects. This course will also help the student prepare to take the licensing examination.',
+                'Topics covered: Nevada laws pertaining to property managers, property management contracts and agreements, disclosures, property management for common interest communities, landlord-tenant laws, fair housing laws, record keeping and trust accounting, commercial property management, and risk management for property managers.'],
+          },
+          {
+            q: 'Where is the class held?',
+            a: ['Students may opt to attend class in person at our St. Rose campus: 3185 St. Rose Parkway, Suite 200, Henderson, NV 89052 or through ZOOM. Zoom attendees must adhere to the virtual attendance guidelines listed on the enrollment agreement.'],
+          },
+          {
+            q: 'What does it cost?',
+            a: ['24 Hours of Instruction: Tuition $275 + Admin Fee $25. Total Fees: $300.00.'],
+          },
+        ],
+      },
+      {
+        title: 'Refunds',
+        items: [
+          {
+            q: 'What is the refund policy?',
+            a: ['The Academy\u2019s cancellation and refund policy applies to this course. See the Nevada school policies page for the full schedule, or send written refund requests to RESchool@bhhsnv.com.'],
+          },
+        ],
+      },
+    ],
+    contact: {
+      phones: [{ label: 'Academy', number: '702-915-7755', href: 'tel:7029157755' }],
+      email: 'LauretteM@bhhsnv.com',
+      address: '3185 St. Rose Parkway, Suite 200, Henderson, NV 89052',
+      admins: ['Laurette Mormon, Director of Education'],
+    },
+  },
 };
 
 const P = POLICY_DATA[window.POLICY_STATE || 'arizona'];
@@ -218,10 +291,10 @@ function PolicyPage() {
             <span>/</span>
             <a href={P.backHref}>{P.backLabel}</a>
             <span>/</span>
-            <span style={{color:'var(--gold)'}}>School Policies</span>
+            <span style={{color:'var(--gold)'}}>{P.crumb}</span>
           </div>
           <div className="eyebrow">{P.school}{P.schoolNo ? ' \u00b7 School No. ' + P.schoolNo : ''}</div>
-          <h1>{P.name} School<br/><span className="gold">Policies &amp; Procedures</span></h1>
+          <h1>{P.heading}<br/><span className="gold">{P.accent}</span></h1>
           <p>{P.intro}</p>
         </div>
       </header>

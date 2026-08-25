@@ -21,7 +21,6 @@
     { "source": "/arizona-real-estate-academy-faq", "destination": "/arizona-school-policies", "permanent": true },
     { "source": "/nevada-real-estate-academy-faq", "destination": "/nevada-school-policies", "permanent": true },
     { "source": "/nevada-real-estate-academy-licensing-faq-nv", "destination": "/nevada-school-policies", "permanent": true },
-    { "source": "/prop-management-faq", "destination": "/property-management", "permanent": true },
-    { "source": "/property-management-faq", "destination": "/property-management", "permanent": true }
+    { "source": "/prop-management-faq", "destination": "/property-management-faq", "permanent": true }
   ]
 }
