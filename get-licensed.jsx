@@ -171,6 +171,11 @@ const STATE_DATA = {
       code: "30 HR",
       badge: "Modules A – O · Live and In Person",
       requirement: "You must have your License Number assigned from the Real Estate Division to get the required credit for these courses.",
+      pricing: [
+        { k: "$10", v: "Per session" },
+        { k: "$100", v: "All 10 sessions" },
+      ],
+      findingNote: "On the registration site these are listed as \u201cQuick Start\u201d \u2014 register for the full Sessions 1\u201310 bundle, or enroll session by session.",
       notCE: "First year licensees only. This course is not Continuing Education (CE).",
       sessions: [
         { n: 'Session 1',  mod: 'Module E',        title: 'Professional Conduct, Etiquette and Ethics' },
@@ -715,6 +720,14 @@ function PostLicensing() {
               ))}
             </ol>
           )}
+          {P.pricing && (
+            <div className="pl-pricing">
+              {P.pricing.map(p => (
+                <div key={p.k} className="pl-price"><span className="pl-price-k">{p.k}</span><span className="pl-price-v">{p.v}</span></div>
+              ))}
+            </div>
+          )}
+          {P.findingNote && <p className="course-note">{P.findingNote}</p>}
           {P.requirement && <p className="course-note">{P.requirement}</p>}
           <div className="course-detail-cta">
             <a className="btn btn-gold" href={P.url} target="_blank" rel="noopener noreferrer"><Icon.Calendar size={14}/> View Dates & Register</a>

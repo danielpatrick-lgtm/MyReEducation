@@ -21,6 +21,13 @@
     { "source": "/arizona-real-estate-academy-faq", "destination": "/arizona-school-policies", "permanent": true },
     { "source": "/nevada-real-estate-academy-faq", "destination": "/nevada-school-policies", "permanent": true },
     { "source": "/nevada-real-estate-academy-licensing-faq-nv", "destination": "/nevada-school-policies", "permanent": true },
-    { "source": "/prop-management-faq", "destination": "/property-management-faq", "permanent": true }
+    { "source": "/prop-management-faq", "destination": "/property-management-faq", "permanent": true },
+
+    { "source": "/wp-login.php", "destination": "/", "permanent": false },
+    { "source": "/wp-admin", "destination": "/", "permanent": false },
+    { "source": "/wp-admin/:path*", "destination": "/", "permanent": false },
+    { "source": "/wp-content/:path*", "destination": "/", "permanent": false },
+    { "source": "/wp-includes/:path*", "destination": "/", "permanent": false },
+    { "source": "/xmlrpc.php", "destination": "/", "permanent": false }
   ]
 }

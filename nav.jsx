@@ -85,6 +85,7 @@ function Nav() {
             </div>
           </div>
 
+          <a href="/get-licensed-nevada#postlicensing" className="nav-muted">Nevada Post Licensing</a>
           <a href="/property-management" className="nav-muted">Property Management</a>
         </div>
         <a href={home("#states")} className="btn btn-gold nav-cta" style={{padding:'12px 20px'}}>
@@ -132,6 +133,7 @@ function Nav() {
               <span>Property Management</span>
               <Icon.ArrowUR size={14}/>
             </a>
+            <a href="/get-licensed-nevada#postlicensing" onClick={close}>Nevada Post Licensing</a>
           </div>
           <a href={home("#states")} className="btn btn-gold nav-mobile-cta" onClick={close}>
             <Icon.Rocket size={15}/> Get Licensed

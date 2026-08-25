@@ -9,6 +9,22 @@ function GLApp() {
     return () => io.disconnect();
   }, []);
 
+  // React renders after parse, so an incoming #hash has no target yet — scroll once mounted.
+  React.useEffect(() => {
+    const id = window.location.hash.slice(1);
+    if (!id) return;
+    let tries = 0;
+    const go = () => {
+      const el = document.getElementById(id);
+      if (el) {
+        const nav = document.querySelector('.nav');
+        const off = (nav ? nav.getBoundingClientRect().height : 0) + 16;
+        window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'smooth' });
+      } else if (tries++ < 20) setTimeout(go, 60);
+    };
+    setTimeout(go, 80);
+  }, []);
+
   return (
     <>
       <Nav/>
