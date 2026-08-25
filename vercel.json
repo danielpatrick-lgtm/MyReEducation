@@ -8,6 +8,20 @@
     { "source": "/Continuing Education Arizona.html", "destination": "/continuing-education-arizona", "permanent": true },
     { "source": "/Continuing Education California.html", "destination": "/continuing-education-california", "permanent": true },
     { "source": "/Continuing Education Nevada.html", "destination": "/continuing-education-nevada", "permanent": true },
-    { "source": "/Property Management.html", "destination": "/property-management", "permanent": true }
+    { "source": "/Property Management.html", "destination": "/property-management", "permanent": true },
+
+    { "source": "/continuing-education", "destination": "/continuing-education-nevada", "permanent": true },
+    { "source": "/continuing-education-nv", "destination": "/continuing-education-nevada", "permanent": true },
+    { "source": "/continuing-education-az", "destination": "/continuing-education-arizona", "permanent": true },
+    { "source": "/continuing-education-ca", "destination": "/continuing-education-california", "permanent": true },
+    { "source": "/get-licensed", "destination": "/", "permanent": true },
+    { "source": "/get-licensed-az", "destination": "/get-licensed-arizona", "permanent": true },
+    { "source": "/get-licensed-ca", "destination": "/get-licensed-california", "permanent": true },
+    { "source": "/get-licensed-nv", "destination": "/get-licensed-nevada", "permanent": true },
+    { "source": "/arizona-real-estate-academy-faq", "destination": "/arizona-school-policies", "permanent": true },
+    { "source": "/nevada-real-estate-academy-faq", "destination": "/get-licensed-nevada", "permanent": true },
+    { "source": "/nevada-real-estate-academy-licensing-faq-nv", "destination": "/get-licensed-nevada", "permanent": true },
+    { "source": "/prop-management-faq", "destination": "/property-management", "permanent": true },
+    { "source": "/property-management-faq", "destination": "/property-management", "permanent": true }
   ]
 }

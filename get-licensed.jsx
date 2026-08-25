@@ -23,12 +23,11 @@ const STATE_DATA = {
       address: "16100 N 71st Street, Ste. 400, Scottsdale, AZ 85254",
       admins: ["Forrest Barbee", "Christina Rogowski", "Mary Sand"],
     },
-    video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Arizona-How-to-Register-2.mp4", title: "How to Register", blurb: "A short walkthrough of the Arizona registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=36&viewMode=list",
     selfPacedUrl: "https://bhhsaz.theceshop.com/arizona/pre-licensing/az-salesperson-pre-licensing-cost",
     hideReimbursement: true,
     faqs: [
-      { label: 'AZ Academy FAQ',   href: 'https://myreeducation.com/arizona-real-estate-academy-faq/' },
+      { label: 'School Policies \u0026 Procedures', href: '/arizona-school-policies' },
       { label: 'AZ Licensing FAQ', href: 'https://azre.gov/licensees/original-licensing-information' },
     ],
     testimonials: {
@@ -178,8 +177,8 @@ const STATE_DATA = {
     },
     selfPacedUrl: "http://www.theceshop.com/",
     faqs: [
-      { label: 'Academy FAQ',   href: 'https://myreeducation.com/nevada-real-estate-academy-faq/' },
-      { label: 'Licensing FAQ', href: 'https://myreeducation.com/nevada-real-estate-academy-licensing-faq-nv/' },
+      { label: 'NV Real Estate Division', href: 'https://red.nv.gov/Licensing/Real_Estate/' },
+      { label: 'NV Licensing Requirements', href: 'https://red.nv.gov/uploadedFiles/rednvgov/content/Licensing/Real_Estate/RE_License_Requirements.pdf' },
     ],
     quickfacts: [
       { k: "120", suffix: "hr", v: "Pre-licensing course" },
@@ -194,7 +193,6 @@ const STATE_DATA = {
       division: { text: "If you are licensed in another state or need more information on which course to enroll in please contact the Nevada Real Estate Division at 702-486-4033 or visit them on the web.", label: "Nevada Real Estate Division", href: "http://www.red.state.nv.us/" },
       fine: "Berkshire Hathaway HomeServices Nevada Properties and Nevada Real Estate Academy do not guarantee placement with any real estate company.",
     },
-    video: { src: "https://myreeducation.com/wp-content/uploads/2024/03/Nevada-How-to-Register.mp4", title: "How to Register", blurb: "A short walkthrough of the Nevada registration process, start to finish." },
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=25&viewMode=list",
     centersCopy: {
       eyebrow: "Training Centers",
