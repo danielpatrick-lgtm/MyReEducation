@@ -163,7 +163,13 @@ const STATE_DATA = {
     email: "RESchool@bhhsnv.com",
     phoneLabel: "Direct Line",
     hideReimbursement: true,
-    grouponUrl: "https://www.groupon.com/deals/berkshire-hathaway-home-services-nevada-properties-1",
+    grouponUrl: "https://www.groupon.com/deals/berkshire-hathaway-home-services-nevada-properties-1?redemptionLocationId=a3364ffb-018e-b06a-9052-014717bdb972",
+    howTo: {
+      title: "How to register, step by step",
+      blurb: "A short walkthrough of the registration process, from finding your class on the calendar through checkout.",
+      embed: "https://drive.google.com/file/d/11DO64lOQzdXM2LMcxDJEoF4ggnc3VW5Z/preview",
+      href: "https://drive.google.com/file/d/11DO64lOQzdXM2LMcxDJEoF4ggnc3VW5Z/view",
+    },
     postLicensing: {
       eyebrow: "Post-Licensing · First-Year Licensees",
       title: ["Newly licensed?", "30 hours, 10 sessions."],
@@ -199,7 +205,7 @@ const STATE_DATA = {
     selfPacedUrl: "http://www.theceshop.com/",
     faqs: [
       { label: 'School Policies \u0026 Procedures', href: '/nevada-school-policies' },
-      { label: 'NV Real Estate Division', href: 'https://red.nv.gov/Licensing/Real_Estate/' },
+      { label: 'NV Real Estate Division: License Requirements', href: 'https://red.nv.gov/Content/Real_Estate/Salesperson/Initial_License_Requirements/' },
     ],
     quickfacts: [
       { k: "120", suffix: "hr", v: "Pre-licensing course" },
@@ -316,6 +322,13 @@ function GLHero() {
         </div>
         <div className="eyebrow">Pre-Licensing Course · {S.name}</div>
         <h1>{S.tagline}<br/><span className="gold">{S.accent}</span></h1>
+        {S.grouponUrl && (
+          <a className="gl-groupon" href={S.grouponUrl} target="_blank" rel="noopener noreferrer">
+            <span className="gl-groupon-tag">Before you register</span>
+            <span className="gl-groupon-text">A discounted tuition offer is available on Groupon. Check it before paying full price &mdash; discounts cannot be applied after registration.</span>
+            <Icon.ArrowUR size={15}/>
+          </a>
+        )}
         <p className="gl-hero-sub">{S.intro}</p>
         <div className="hero-ctas">
           <a className="btn btn-gold" {...registerProps}><Icon.Rocket size={15}/> {S.selfPacedOnly ? 'Enroll Through The CE Shop' : 'Register for Class'}</a>
@@ -494,6 +507,18 @@ function Courses() {
             <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel ? `${S.phoneLabel} · ${S.phone}` : S.phone}</a>
           </div>
         </div>
+
+        {S.howTo && (
+          <div className="course-video reveal">
+            <div className="course-video-side">
+              <div className="eyebrow">Walkthrough</div>
+              <h3>{S.howTo.title}</h3>
+              <p>{S.howTo.blurb}</p>
+              <a className="btn btn-line" href={S.howTo.href} target="_blank" rel="noopener noreferrer"><Icon.ArrowUR size={14}/> Open in a new tab</a>
+            </div>
+            <iframe className="course-video-player" src={S.howTo.embed} title={S.howTo.title} allow="autoplay" allowFullScreen></iframe>
+          </div>
+        )}
 
         {S.video && (
           <div className="course-video reveal">

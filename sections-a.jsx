@@ -59,7 +59,6 @@ function WhySection() {
 
 // ─── SECTION 3 ──────────────────────────────────────────────
 function HowSection() {
-  const [style, setStyle] = React.useState('Online');
   return (
     <section id="how" className="section dark">
       <div className="container">
@@ -72,20 +71,18 @@ function HowSection() {
         <div className="steps reveal">
           <div className="step">
             <div className="step-num">01</div>
-            <h3>Choose Your Learning Style</h3>
-            <p>Pick the format that matches how you actually learn, and your weekly bandwidth.</p>
+            <h3>Check Your State's Format</h3>
+            <p>Each state sets its own delivery. Your state decides how you attend, not you.</p>
             <div className="style-pills">
-              {['Online', 'Virtual', 'In-Person'].map(s => (
-                <button key={s} className={"style-pill" + (style === s ? " active" : "")} onClick={() => setStyle(s)}>
-                  {s}
-                </button>
-              ))}
+              <span className="style-pill" style={{cursor:'default'}}>NV In-Person</span>
+              <span className="style-pill" style={{cursor:'default'}}>AZ Zoom</span>
+              <span className="style-pill" style={{cursor:'default'}}>CA Self-Paced Online</span>
             </div>
           </div>
           <div className="step">
             <div className="step-num">02</div>
             <h3>Complete Your Coursework</h3>
-            <p>Learn from licensed in-state instructors and active industry professionals, in the classroom, live online, or at your own pace.</p>
+            <p>Learn from licensed in-state instructors and active industry professionals, in the format your state requires.</p>
             <div className="style-pills">
               <span className="style-pill" style={{cursor:'default'}}>AZ 90 hr · NV 120 hr · CA 135 hr</span>
             </div>

@@ -84,7 +84,7 @@ const CE_DATA = {
     registerUrl: "https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&activity_select_param=2&activity_category_ids=24&viewMode=list",
     phone: "702-915-7755",
     phoneHref: "tel:7029157755",
-    email: "education@bhhsv2.com",
+    email: "REClasses@bhhsnv.com",
     quickfacts: [
       { k: "Open", v: "To agents at every brokerage" },
       { k: "3", v: "Las Vegas–area classrooms" },
@@ -94,7 +94,7 @@ const CE_DATA = {
     renewalLinks: [
       { label: "Nevada Real Estate Division: Renewal Requirements", url: "https://red.nv.gov/Content/Licensing/Renewal_Requirements/" },
       { label: "Renew Online: Nevada Online Services", url: "http://red.nv.gov/Content/Online_Services/Online_Renewals/" },
-      { label: "Generic License Renewal Form (Form 580)", url: "http://red.nv.gov/uploadedFiles/rednvgov/Content/Forms/580.pdf" },
+      { label: "License Renewal Form (Form 580)", url: "http://red.nv.gov/uploadedFiles/rednvgov/Content/Forms/580.pdf" },
     ],
     onlineUrl: "https://bhhsnv.theceshop.com/online-education/nevada/real-estate/sales-license-on-or-after-10-1-21-/continuing-education/courses.html",
     onlineNote: "Prefer to finish your hours online? Self-paced Nevada CE is available through our education partner, The CE Shop. Note: the online option does not accept the BHHS agent CE coupon code.",

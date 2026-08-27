@@ -17,7 +17,7 @@ function Hero() {
               <span className="gold">Here.</span>
             </h1>
             <p className="hero-sub">
-              Get licensed with the modern real estate academy built for the next generation of agents. Live instruction, licensed in-state instructors, and self-paced options across Arizona, California, and Nevada.
+              Get licensed with the modern real estate academy built for the next generation of agents. Licensed in-state instructors and state-approved pre-licensing in Arizona, California, and Nevada.
             </p>
             <div className="hero-ctas">
               <a className="btn btn-gold" href="#states">
@@ -36,7 +36,7 @@ function Hero() {
             </div>
             <div className="hero-meta-row">
               <span className="k">Live<span style={{color:'var(--gold)'}}>+</span></span>
-              <span className="v">Instructor-led and self-paced options</span>
+              <span className="v">Taught the way your state requires</span>
             </div>
             <div className="hero-meta-row">
               <span className="k">BHHS<span style={{color:'var(--gold)'}}>.</span></span>

@@ -60,36 +60,36 @@ function LearningSection() {
       <div className="container">
         <div className="section-head reveal">
           <div className="eyebrow">Learning Options</div>
-          <h2>Learn Your Way.</h2>
-          <p>Three ways to complete your pre-licensing hours. Same curriculum, same state exam, same career outcome.</p>
+          <h2>How Each State Teaches.</h2>
+          <p>Delivery is set by each state's regulator, not by preference. Same career outcome, three different paths in.</p>
         </div>
 
         <div className="glass-grid reveal">
           <div className="glass">
-            <div className="ic"><Icon.Online size={22}/></div>
-            <h3>Self-Paced Online</h3>
-            <p>Complete your required hours on your own schedule through our online education partner, The CE Shop. Available in Arizona, California, and Nevada.</p>
+            <div className="ic"><Icon.Inperson size={22}/></div>
+            <h3>Nevada &mdash; In Person</h3>
+            <p>Classroom instruction at Nevada Real Estate Academy, with day and evening sections at our Henderson and West Sunset campuses. Seating is limited, so early enrollment is recommended.</p>
             <div className="meta">
-              <span>SELF-PACED</span>
-              <span className="badge">Enroll any time</span>
+              <span>120 HOURS</span>
+              <a className="badge badge-link" href="https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&amp;activity_select_param=2&amp;activity_category_ids=25&amp;viewMode=list" target="_blank" rel="noopener noreferrer">Class calendar</a>
             </div>
           </div>
           <div className="glass">
             <div className="ic"><Icon.Virtual size={22}/></div>
-            <h3>Live Remote</h3>
-            <p>Attend the same instructor-led classes online. Students join on camera for the full session from a computer or tablet, per state requirements.</p>
+            <h3>Arizona &mdash; Live Remote</h3>
+            <p>Arizona only. All 90 hours are taught live online over Zoom by Arizona Real Estate Education. Students join on camera for the full session from a computer or tablet, per state requirements.</p>
             <div className="meta">
-              <span>INSTRUCTOR-LED</span>
-              <span className="badge">Live online</span>
+              <span>90 HOURS</span>
+              <a className="badge badge-link" href="https://anc.apm.activecommunities.com/reacademy/activity/search?onlineSiteId=0&amp;activity_select_param=2&amp;activity_category_ids=36&amp;viewMode=list" target="_blank" rel="noopener noreferrer">Class calendar</a>
             </div>
           </div>
           <div className="glass">
-            <div className="ic"><Icon.Inperson size={22}/></div>
-            <h3>In Person</h3>
-            <p>Classroom instruction at our campuses in Scottsdale, Henderson, and Las Vegas. Seating is limited, so early enrollment is recommended.</p>
+            <div className="ic"><Icon.Online size={22}/></div>
+            <h3>California &mdash; Self-Paced</h3>
+            <p>Complete your required hours on your own schedule through <a href="https://bhhsca.theceshop.com/california/pre-licensing/ca-salesperson-pre-licensing-cost/" target="_blank" rel="noopener noreferrer">The CE Shop</a>, our affiliate. There are no live class dates to work around.</p>
             <div className="meta">
-              <span>AZ · NV CAMPUSES</span>
-              <span className="badge">Enrolling now</span>
+              <span>135 HOURS</span>
+              <a className="badge badge-link" href="https://bhhsca.theceshop.com/california/pre-licensing/ca-salesperson-pre-licensing-cost/" target="_blank" rel="noopener noreferrer">Enroll any time</a>
             </div>
           </div>
         </div>
@@ -256,6 +256,7 @@ function Footer() {
             <h4>Connect</h4>
             <ul>
               <li><a href={contact.href}>{contact.phone}</a></li>
+              <li><a href="mailto:RESchool@bhhsnv.com">RESchool@bhhsnv.com</a></li>
             </ul>
           </div>
         </div>

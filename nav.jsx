@@ -6,6 +6,8 @@ function Nav() {
   const [ceOpen, setCeOpen] = React.useState(false);      // desktop dropdown
   const [ceMobileOpen, setCeMobileOpen] = React.useState(false); // mobile accordion
   const ceTimer = React.useRef(null);
+  const [pgOpen, setPgOpen] = React.useState(false);      // Programs dropdown
+  const pgTimer = React.useRef(null);
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -23,7 +25,7 @@ function Nav() {
   // Close on Escape
   React.useEffect(() => {
     if (!menuOpen && !ceOpen) return;
-    const onKey = (e) => { if (e.key === 'Escape') { setMenuOpen(false); setCeOpen(false); } };
+    const onKey = (e) => { if (e.key === 'Escape') { setMenuOpen(false); setCeOpen(false); setPgOpen(false); } };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [menuOpen, ceOpen]);
@@ -51,6 +53,13 @@ function Nav() {
   // travel from the trigger to the panel without it snapping shut.
   const openCe  = () => { clearTimeout(ceTimer.current); setCeOpen(true); };
   const closeCe = () => { ceTimer.current = setTimeout(() => setCeOpen(false), 140); };
+  const openPg  = () => { clearTimeout(pgTimer.current); setPgOpen(true); };
+  const closePg = () => { pgTimer.current = setTimeout(() => setPgOpen(false), 140); };
+
+  const pgLinks = [
+    { href: "/get-licensed-nevada#postlicensing", label: "Nevada Post Licensing" },
+    { href: "/property-management",               label: "Property Management" },
+  ];
 
   return (
     <nav className={"nav" + (scrolled ? " scrolled" : "")}>
@@ -85,8 +94,29 @@ function Nav() {
             </div>
           </div>
 
-          <a href="/get-licensed-nevada#postlicensing" className="nav-muted">Nevada Post Licensing</a>
-          <a href="/property-management" className="nav-muted">Property Management</a>
+          <div
+            className={"nav-dropdown nav-muted" + (pgOpen ? " open" : "")}
+            onMouseEnter={openPg}
+            onMouseLeave={closePg}
+          >
+            <button
+              className="nav-dropdown-trigger"
+              aria-haspopup="true"
+              aria-expanded={pgOpen}
+              onClick={() => setPgOpen(o => !o)}
+            >
+              Programs
+              <svg className="nav-chev" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div className="nav-dropdown-panel" role="menu">
+              {pgLinks.map(l => (
+                <a key={l.label} href={l.href} role="menuitem">
+                  <span>{l.label}</span>
+                  <Icon.ArrowUR size={13}/>
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
         <a href={home("#states")} className="btn btn-gold nav-cta" style={{padding:'12px 20px'}}>
           <Icon.Rocket size={15}/> Get Licensed

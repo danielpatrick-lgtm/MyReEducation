@@ -124,8 +124,8 @@ const POLICY_DATA = {
           {
             q: 'Where are the classes held?',
             a: ['Our classes are held at one of our 2 classroom locations. Courses alternate times and locations and are subject to change without notice.'],
-            list: ['Corporate Training Classroom \u2014 3185 St. Rose Parkway Suite #100, Henderson, Nevada 89052. 702-796-7777. The Henderson classroom consists of 14,527 sq. ft. of classroom and administrative areas and has a maximum classroom capacity of 50 pre-licensing students.',
-                   'SW Training Classroom \u2014 8850 West Sunset Road Suite #200, Las Vegas, Nevada 89148. 702-734-5555.'],
+            list: ['Corporate Training Classroom \u2014 3185 St. Rose Parkway Suite #100, Henderson, Nevada 89052. 702-915-7755. The Henderson classroom consists of 14,527 sq. ft. of classroom and administrative areas and has a maximum classroom capacity of 50 pre-licensing students.',
+                   'SW Training Classroom \u2014 8850 West Sunset Road Suite #200, Las Vegas, Nevada 89148. 702-915-7755.'],
           },
           {
             q: 'What times are the classes instructed?',
@@ -133,7 +133,7 @@ const POLICY_DATA = {
           },
           {
             q: 'Who teaches the courses?',
-            a: ['Laurette Mormon is our Director of Education and the Academy has 4 instructors who teach the courses.'],
+            a: ['Laurette Mormon is our Director of Education. Courses are taught by Dee Neiman and Laurette Mormon.'],
           },
           {
             q: 'Will a certificate be issued?',
@@ -150,7 +150,7 @@ const POLICY_DATA = {
           },
           {
             q: 'What documents do I need to submit?',
-            a: ['One of the Enrollment documents and the Course Catalog with all receipts indicating proof of tuition/book payment must be emailed to RESchool@bhhsnv.com, including any discount coupons. Upon receipt of these documents, you will receive an email with instructions to pick up Course books.'],
+            a: ['Once registration is received, students will receive a confirmation email containing the Enrollment Agreement and available book pick-up dates and times. Students must complete and return the Enrollment Agreement, along with any valid coupons, to REschool@bhhsnv.com before scheduling their book pick-up appointment.'],
           },
         ],
       },
@@ -185,23 +185,13 @@ const POLICY_DATA = {
           },
         ],
       },
-      {
-        title: 'Tuition Reimbursement',
-        items: [
-          {
-            q: 'Is tuition reimbursement available?',
-            a: ['Berkshire Hathaway HomeServices Nevada Properties does offer a pre-licensing tuition reimbursement program for full price students that affiliate with one of the three branches upon successfully completing the course and passing the Pearson Vue state exam. The BHHSNV branches offer continuous sales training programs for newly licensed affiliates.',
-                'Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties, however you are free to affiliate with any Broker or Developer of your choice. Reimbursement program is not available at any other Broker or Developer and does not apply to any discounted tuition.'],
-          },
-        ],
-      },
     ],
     contact: {
-      phones: [{ label: 'Corporate Training Classroom (Henderson)', number: '702-796-7777', href: 'tel:7027967777' },
-               { label: 'SW Training Classroom (Las Vegas)', number: '702-734-5555', href: 'tel:7027345555' }],
+      phones: [{ label: 'Corporate Training Classroom (Henderson)', number: '702-915-7755', href: 'tel:7029157755' },
+               { label: 'SW Training Classroom (Las Vegas)', number: '702-915-7755', href: 'tel:7029157755' }],
       email: 'RESchool@bhhsnv.com',
       address: '3185 St. Rose Parkway Suite #100, Henderson, NV 89052',
-      admins: ['Laurette Mormon, Director of Education'],
+      admins: ['Laurette Mormon, Director of Education', 'Carol Sandoval, Education Coordinator'],
     },
   },
   propertymanagement: {
@@ -325,7 +315,7 @@ function PolicyPage() {
                 {P.contact.phones.map((ph, i) => <li key={i}>{ph.label}: <a href={ph.href}>{ph.number}</a></li>)}
                 <li>Email: <a href={"mailto:" + P.contact.email}>{P.contact.email}</a></li>
                 <li>{P.contact.address}</li>
-                <li>School Administrators: {P.contact.admins.join(', ')}</li>
+                <li>School Administrators: {P.contact.admins.join(' · ')}</li>
               </ul>
             </article>
           </section>

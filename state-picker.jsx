@@ -6,7 +6,7 @@ const STATES = [
     name: 'Arizona',
     code: 'AZ',
     hours: '90',
-    desc: 'Get your Arizona real estate license. In-person classes in Scottsdale, plus live remote and self-paced online options.',
+    desc: 'Get your Arizona real estate license. Live remote classes via Zoom through Arizona Real Estate Education.',
     href: '/get-licensed-arizona',
     accent: 'oklch(0.62 0.16 30)',  // warm sunset
     photo: 'assets/state-az.jpg',
@@ -16,7 +16,7 @@ const STATES = [
     name: 'California',
     code: 'CA',
     hours: '135',
-    desc: 'Get your California real estate license. Self-paced online classes available statewide, built around how you live.',
+    desc: 'Get your California real estate license. Self-paced online through The CE Shop, our affiliate.',
     href: '/get-licensed-california',
     accent: 'oklch(0.65 0.13 230)', // pacific blue
     photo: 'assets/state-ca.jpg',
@@ -26,7 +26,7 @@ const STATES = [
     name: 'Nevada',
     code: 'NV',
     hours: '120',
-    desc: 'Get your Nevada real estate license. Day and evening classes at our Henderson and West Sunset campuses in the Las Vegas area.',
+    desc: 'Get your Nevada real estate license. In-person day and evening classes at our Henderson and West Sunset campuses.',
     href: '/get-licensed-nevada',
     accent: 'oklch(0.7 0.13 95)',   // desert gold
     photo: 'assets/state-nv.jpg',
@@ -39,9 +39,9 @@ function StatePicker() {
       <div className="container">
         <div className="section-head reveal" style={{textAlign:'center', margin:'0 auto 72px'}}>
           <div className="eyebrow" style={{justifyContent:'center', display:'inline-flex'}}>Choose Your State</div>
-          <h2>Same Academy.<br/><span className="gold">Three Licenses.</span></h2>
+          <h2>Three States.<br/><span className="gold">Three Licenses.</span></h2>
           <p style={{marginLeft:'auto', marginRight:'auto'}}>
-            Pick the state where you'll launch your career. Each track is built around its own state's exam, contracts, and law, taught by licensed in-state instructors.
+            Pick the state where you'll launch your career. Nevada Real Estate Academy teaches in the classroom, Arizona Real Estate Education teaches live remote via Zoom, and California is self-paced online through our affiliate, The CE Shop. Each track is built around its own state's exam, contracts, and law.
           </p>
         </div>
 
