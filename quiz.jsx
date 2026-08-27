@@ -83,7 +83,7 @@ const ARCHETYPES = {
 // Leads are delivered here. FormSubmit requires a ONE-TIME activation:
 // the first submission triggers a confirmation email to this address —
 // click the link in it once and every future lead lands in the inbox.
-const LEAD_EMAIL = 'education@bhhsv2.com';
+const LEAD_EMAIL = 'reschool@bhhsnv.com';
 const LEAD_ENDPOINT = 'https://formsubmit.co/ajax/' + LEAD_EMAIL;
 
 function CareerQuiz() {
