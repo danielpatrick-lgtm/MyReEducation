@@ -8,13 +8,13 @@ const STATE_DATA = {
     hours: "90",
     tagline: "Get Licensed.",
     accent: "Get Launched.",
-    intro: "Arizona Real Estate Education \u2014 Pre-Licensing Education Course. All 90 hours are taught live online over Zoom by experienced instructors. Accredited by the Arizona Department of Real Estate.",
-    accreditation: "Accredited by the Arizona Department of Real Estate",
+    intro: "Start your real estate career with Arizona's live online pre-licensing course. All 90 required hours are taught in real time over Zoom by experienced, licensed instructors \u2014 giving you the structure of a classroom with the convenience of learning from home. Approved by the Arizona Department of Real Estate.",
+    accreditation: "Approved by the Arizona Department of Real Estate",
     phone: "480-344-4082",
     phoneHref: "tel:4803444082",
     phoneLabel: "Class Information",
-    altPhone: { label: "School", number: "480-505-6300", href: "tel:4805056300" },
-    email: "reschool@bhhsaz.com",
+    altPhone: { label: "School", number: "480-344-4082", href: "tel:4803444082" },
+    email: "reschoolaz@bhhsaz.com",
     // Required by Arizona Administrative Code R4-28-503(D) on all advertising of
     // Department-approved courses: school name, number, phone, email, administrator.
     compliance: {
@@ -28,7 +28,7 @@ const STATE_DATA = {
     hideReimbursement: true,
     faqs: [
       { label: 'School Policies \u0026 Procedures', href: '/arizona-school-policies' },
-      { label: 'AZ Licensing FAQ', href: 'https://azre.gov/licensees/original-licensing-information' },
+      { label: 'ADRE Licensing Requirements', href: 'https://azre.gov/licensees/original-licensing-information' },
     ],
     testimonials: {
       allUrl: 'https://arizonarealestateeducation.bhhsaz.com/testimonials',
@@ -50,15 +50,15 @@ const STATE_DATA = {
     quickfacts: [
       { k: "90", suffix: "hr", v: "Live online over Zoom" },
       { k: "$499", v: "All-in tuition" },
-      { k: "ADRE", v: "Accredited course" },
+      { k: "ADRE", v: "Approved course" },
     ],
     centersCopy: {
       eyebrow: "How Classes Are Held",
       title: ["Live online.", "One office."],
-      blurb: "All 90 hours are taught live over Zoom, Monday through Friday, in morning, afternoon, and evening sections. You get a live instructor without the commute. You come to our Scottsdale office in person for the Contract Writing class and for testing.",
+      blurb: "All 90 hours are taught live over Zoom \u2014 Monday through Friday, with morning, afternoon, and evening sessions \u2014 so you get real-time instruction without the commute. The Contract Writing class and testing are the only sessions held in person, at our Scottsdale office.",
     },
     centers: [
-      { name: "Scottsdale Office", addr: "16100 N 71st Street, Ste. 400", city: "Scottsdale, AZ 85254", tag: "In person: Contract Writing \u0026 testing" },
+      { name: "Scottsdale Office", addr: "16100 N 71st Street, Ste. 400", city: "Scottsdale, AZ 85254", tag: "In person: Contract Writing \u0026 testing", phone: "480-505-6300", phoneHref: "tel:4805056300" },
     ],
     courses: [
       {
@@ -69,7 +69,7 @@ const STATE_DATA = {
         hours: '90 hours',
         desc: "This Real Estate training course will satisfy all of the requirements of 90 hours of instruction in required real estate subjects, and help students prepare to take the licensing exam.",
         topics: [
-          'Arizona Real Estate Statues, Commissioner Rules',
+          'Arizona Real Estate Statutes, Arizona Administrative Code',
           'Agency Relationships and Managerial Duties',
           'Contracts and Contract Law',
           'Property, Estate & Tenancies; Government Rights',
@@ -395,7 +395,7 @@ function Centers() {
         </div>
         <div className={"centers-grid reveal" + (S.centers.length === 1 ? " one" : "")}>
           {S.centers.map((c, i) => (
-            <a className="center-card" href={S.phoneHref} key={i}>
+            <a className="center-card" href={c.phoneHref || S.phoneHref} key={i}>
               <div className="center-num">{String(i+1).padStart(2,'0')}</div>
               {c.tag && <div className="center-tag">{c.tag}</div>}
               <h3>{c.name}</h3>
@@ -404,7 +404,7 @@ function Centers() {
                 <div>{c.city}</div>
               </div>
               <div className="center-foot">
-                <span><Icon.Phone size={13}/> {S.phone}</span>
+                <span><Icon.Phone size={13}/> {c.phone || S.phone}</span>
                 <span className="center-arrow"><Icon.ArrowUR size={14}/></span>
               </div>
             </a>

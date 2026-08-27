@@ -209,7 +209,7 @@ function FinalCTA() {
 
 // ─── FOOTER ─────────────────────────────────────────────────
 const FOOTER_CONTACT = {
-  arizona:    { phone: '480-344-4082', href: 'tel:4803444082', ce: '/continuing-education-arizona' },
+  arizona:    { phone: '480-344-4082', href: 'tel:4803444082', email: 'reschoolaz@bhhsaz.com', ce: '/continuing-education-arizona' },
   california: { phone: '877-373-4542', href: 'tel:8773734542', ce: '/continuing-education-california' },
   nevada:     { phone: '702-915-7755', href: 'tel:7029157755', ce: '/continuing-education-nevada' },
 };
@@ -256,7 +256,7 @@ function Footer() {
             <h4>Connect</h4>
             <ul>
               <li><a href={contact.href}>{contact.phone}</a></li>
-              <li><a href="mailto:RESchool@bhhsnv.com">RESchool@bhhsnv.com</a></li>
+              <li><a href={`mailto:${contact.email || 'RESchool@bhhsnv.com'}`}>{contact.email || 'RESchool@bhhsnv.com'}</a></li>
             </ul>
           </div>
         </div>

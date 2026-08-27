@@ -100,8 +100,8 @@ const POLICY_DATA = {
     ],
     contact: {
       phones: [{ label: 'Class Information', number: '480-344-4082', href: 'tel:4803444082' },
-               { label: 'School', number: '480-505-6300', href: 'tel:4805056300' }],
-      email: 'reschool@bhhsaz.com',
+               { label: 'Office', number: '480-505-6300', href: 'tel:4805056300' }],
+      email: 'reschoolaz@bhhsaz.com',
       address: '16100 N 71st Street, Ste. 400, Scottsdale, AZ 85254',
       admins: ['Forrest Barbee', 'Christina Rogowski', 'Mary Sand'],
     },
