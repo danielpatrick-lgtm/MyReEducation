@@ -216,7 +216,7 @@ const STATE_DATA = {
       eyebrow: "After You Pass",
       title: ["Licensed is the start.", "The Academy is next."],
       body: "As a student attending Nevada Real Estate Academy you are invited to consult with the Instructors or Director about your Real Estate Career. Nevada Real Estate Academy is associated with Berkshire Hathaway HomeServices Nevada Properties however you are free to affiliate with any Broker or Developer of your choice. Berkshire Hathaway HomeServices Nevada Properties offers Continuous Sales Training for newly licensed affiliates through the Berkshire Hathaway HomeServices Academy.",
-      interview: { text: "For a Private Broker Interview, please call Laurette Mormon at 702-796-7777 ext. 5200", href: "tel:7027967777,5200" },
+      interview: { text: "For a Private Broker Interview, please call Carol Sandoval at 702-915-7755", href: "tel:7029157755" },
       division: { text: "If you are licensed in another state or need more information on which course to enroll in please contact the Nevada Real Estate Division at 702-486-4033 or visit them on the web.", label: "Nevada Real Estate Division", href: "http://www.red.state.nv.us/" },
       fine: "Berkshire Hathaway HomeServices Nevada Properties and Nevada Real Estate Academy do not guarantee placement with any real estate company.",
     },
