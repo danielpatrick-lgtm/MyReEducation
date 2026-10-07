@@ -57,7 +57,7 @@ function Nav() {
   const closePg = () => { pgTimer.current = setTimeout(() => setPgOpen(false), 140); };
 
   const pgLinks = [
-    { href: "/get-licensed-nevada#postlicensing", label: "Nevada Post Licensing" },
+    { href: "/post-licensing-nevada", label: "Nevada Post Licensing" },
     { href: "/property-management",               label: "Property Management" },
   ];
 
@@ -163,7 +163,7 @@ function Nav() {
               <span>Property Management</span>
               <Icon.ArrowUR size={14}/>
             </a>
-            <a href="/get-licensed-nevada#postlicensing" onClick={close}>Nevada Post Licensing</a>
+            <a href="/post-licensing-nevada" onClick={close}>Nevada Post Licensing</a>
           </div>
           <a href={home("#states")} className="btn btn-gold nav-mobile-cta" onClick={close}>
             <Icon.Rocket size={15}/> Get Licensed

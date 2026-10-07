@@ -36,7 +36,7 @@ function GLApp() {
       <Tuition/>
       <Reimbursement/>
       <SelfPaced/>
-      <PostLicensing/>
+      <PostLicensing summary/>
       <GLFinal/>
       <SchoolDisclosure/>
       <Footer/>

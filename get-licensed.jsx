@@ -715,7 +715,7 @@ function GLFinal() {
   );
 }
 
-function PostLicensing() {
+function PostLicensing({ summary }) {
   const P = S.postLicensing;
   if (!P) return null;
   return (
@@ -735,7 +735,7 @@ function PostLicensing() {
             {P.code && <div className="course-detail-code">{P.code}</div>}
           </div>
           <p className="course-detail-desc">{P.blurb}</p>
-          {P.sessions && (
+          {!summary && P.sessions && (
             <ol className="pl-sessions">
               {P.sessions.map(s => (
                 <li key={s.n}>
@@ -752,9 +752,10 @@ function PostLicensing() {
               ))}
             </div>
           )}
-          {P.findingNote && <p className="course-note">{P.findingNote}</p>}
-          {P.requirement && <p className="course-note">{P.requirement}</p>}
+          {!summary && P.findingNote && <p className="course-note">{P.findingNote}</p>}
+          {!summary && P.requirement && <p className="course-note">{P.requirement}</p>}
           <div className="course-detail-cta">
+            {summary && <a className="btn btn-ghost" href="/post-licensing-nevada"><Icon.Arrow size={14}/> See All 10 Sessions</a>}
             <a className="btn btn-gold" href={P.url} target="_blank" rel="noopener noreferrer"><Icon.Calendar size={14}/> View Dates & Register</a>
             <a className="btn btn-ghost" href={S.phoneHref}><Icon.Phone size={14}/> {S.phoneLabel} · {S.phone}</a>
           </div>
