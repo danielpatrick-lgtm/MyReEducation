@@ -24,6 +24,8 @@
     { "source": "/prop-management-faq", "destination": "/property-management-faq", "permanent": true },
     { "source": "/post-licensing-nevada", "destination": "/get-licensed-nevada#postlicensing", "permanent": true },
     { "source": "/az-enrollment", "destination": "/get-licensed-arizona", "permanent": true },
+    { "source": "/re-masters", "destination": "/", "permanent": true },
+    { "source": "/re-masters/:path*", "destination": "/", "permanent": true },
 
     { "source": "/wp-login.php", "destination": "/", "permanent": false },
     { "source": "/wp-admin", "destination": "/", "permanent": false },
