@@ -24,6 +24,10 @@
     { "source": "/prop-management-faq", "destination": "/property-management-faq", "permanent": true },
     { "source": "/post-licensing-nevada", "destination": "/get-licensed-nevada#postlicensing", "permanent": true },
     { "source": "/az-enrollment", "destination": "/get-licensed-arizona", "permanent": true },
+    { "source": "/arizona-real-estate-academy-licensing-faq", "destination": "/arizona-school-policies", "permanent": true },
+    { "source": "/get-licensed-in-real-estate", "destination": "/", "permanent": true },
+    { "source": "/get-located-arizona", "destination": "/get-licensed-arizona", "permanent": true },
+    { "source": "/wp-content/uploads/2014/12/Nevada-Real-Estate-Academy-Course-Catalog-2018.pdf", "destination": "/get-licensed-nevada", "permanent": true },
     { "source": "/re-masters", "destination": "/", "permanent": true },
     { "source": "/re-masters/:path*", "destination": "/", "permanent": true },
 
