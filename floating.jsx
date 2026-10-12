@@ -14,7 +14,7 @@ function StickyCTA() {
     <div className={"sticky-cta" + (visible ? " visible" : "")}>
       <div className="label">
         {cfg.title || 'Start Your Career Today'}
-        <small>{cfg.note || 'Next class · Jun 14'}</small>
+        <small>{cfg.note || 'Classes in AZ · CA · NV'}</small>
       </div>
       <a className="btn btn-gold" href={href} {...(ext ? {target:'_blank', rel:'noopener noreferrer'} : {})} style={{padding:'10px 16px', fontSize:13}}>
         <Icon.Rocket size={13}/> {cfg.label || 'Enroll'}
