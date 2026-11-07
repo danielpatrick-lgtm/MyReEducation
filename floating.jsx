@@ -7,8 +7,16 @@ function StickyCTA() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+  // Default target: the homepage's state picker if this page has one,
+  // otherwise this page's own registration section.
+  const [fallback, setFallback] = React.useState('#states');
+  React.useEffect(() => {
+    if (!document.getElementById('states')) {
+      setFallback(document.getElementById('register') ? '#register' : '/#states');
+    }
+  }, []);
   const cfg = (typeof window !== 'undefined' && window.STICKY_CTA) || {};
-  const href = cfg.href || '#states';
+  const href = cfg.href || fallback;
   const ext = /^https?:/.test(href);
   return (
     <div className={"sticky-cta" + (visible ? " visible" : "")}>

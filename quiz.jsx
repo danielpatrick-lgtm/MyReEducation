@@ -109,7 +109,10 @@ function CareerQuiz() {
   React.useEffect(() => {
     const onOpen = () => { setStep(0); setAnswers([]); resetLead(); setOpen(true); };
     window.addEventListener('open-career-quiz', onOpen);
-    return () => window.removeEventListener('open-career-quiz', onOpen);
+    window.__careerQuizReady = true;
+    // Footer links on pages without the quiz send visitors to /#quiz.
+    if (window.location.hash === '#quiz') onOpen();
+    return () => { window.__careerQuizReady = false; window.removeEventListener('open-career-quiz', onOpen); };
   }, []);
 
   React.useEffect(() => {
