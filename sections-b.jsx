@@ -220,7 +220,11 @@ function Footer() {
   const onHomePage = typeof window !== 'undefined' &&
     /(?:index|Real Estate Academy)\.html$|^\/?$/.test(window.location.pathname);
   const homeLink = (hash) => onHomePage ? hash : 'index.html' + hash;
-  const openQuiz = (e) => { e.preventDefault(); window.dispatchEvent(new Event('open-career-quiz')); };
+  const openQuiz = (e) => {
+    if (!window.__careerQuizReady) return; // follow the link to /#quiz
+    e.preventDefault();
+    window.dispatchEvent(new Event('open-career-quiz'));
+  };
   return (
     <footer className="footer">
       <div className="container">
@@ -249,7 +253,7 @@ function Footer() {
               <li><a href={homeLink('#how')}>How It Works</a></li>
               <li><a href={homeLink('#why')}>Why Real Estate</a></li>
               <li><a href={homeLink('#states')}>Classes</a></li>
-              <li><a href="#" onClick={openQuiz}>Career Match Quiz</a></li>
+              <li><a href="/#quiz" onClick={openQuiz}>Career Match Quiz</a></li>
             </ul>
           </div>
           <div>

@@ -4,7 +4,18 @@ Marketing site for Real Estate Academy — pre-licensing real estate education a
 
 ## What this is
 
-A modern, fast, fully-static marketing site. No build step, no database — just HTML, CSS, and JavaScript. Loads instantly anywhere.
+A fast, fully-static marketing site — HTML, CSS, and React components written as JSX. No database.
+
+## Build (pre-rendering for SEO)
+
+You still edit the `.html` and `.jsx` files in the repo root exactly as before. On every deploy Vercel runs `npm run build` (`scripts/build.mjs`), which writes the live site to `dist/`:
+
+- compiles each `.jsx` file to plain `.js`, so visitors no longer download Babel or compile code in the browser;
+- pre-renders every page and writes the finished markup into `<div id="root">`, so search engines get the full text, headings and links in the HTML instead of an empty page.
+
+To check locally: `npm install`, then `npm run preview`. The build fails if any page renders without an `<h1>`, so a broken page can't ship silently.
+
+If you add a new page, nothing extra is needed — every `.html` file in the root is built. Add it to `sitemap.xml`.
 
 ## Pages
 
